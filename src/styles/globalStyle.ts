@@ -28,7 +28,7 @@ html {
 
 body {
   box-sizing: border-box;
-  background-color: #F5F5F4;
+  background-color: hsl(0, 0%, 15%);
   font-family: 'montserrat',sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
