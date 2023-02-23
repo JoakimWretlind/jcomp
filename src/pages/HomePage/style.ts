@@ -9,4 +9,12 @@ export const HomePageContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
   background-color: ${(props) => props.theme.midtWhite};
+  h1 {
+    margin: 3rem 0 1rem;
+    font-size: 3rem;
+    text-transform: capitalize;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    font-family: "Roboto", sans-serif;
+  }
 `;
