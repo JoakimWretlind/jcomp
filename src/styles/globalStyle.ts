@@ -1,12 +1,16 @@
 import { createGlobalStyle } from "styled-components";
 
 export const searchTheme = {
+  lightBlue: "#9ED8F5",
   brightWhite: "hsl(0, 0%, 98%)",
   midtWhite: "hsl(240, 5%, 96%)",
   gray: "hsl(0, 0%, 70%)",
   darkBlack: "hsl(0, 0%, 10%)",
   midBlack: "hsl(0, 0%, 15%)",
+  red: "hsl(0, 88%, 37%)",
 
+  buttonShadow: "0 0.2rem 0.4rem rgba(2, 2, 2, 0.3)",
+  buttonShadowHover: "0 0 0.2rem rgba(2, 2, 2, 0.3)",
   cardShadow: "0 0.2rem 0.4rem rgba(2, 2, 2, 0.2)",
   cardShadowHover: "0 0.3rem 0.6rem rgba(2, 2, 2, 0.2)",
 
