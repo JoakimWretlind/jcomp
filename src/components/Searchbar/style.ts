@@ -11,7 +11,7 @@ export const SearchSection = styled.div`
     display: flex;
     width: 100%;
     border-radius: 2rem;
-    background-color: #f4f4f5;
+    background-color: ${(props) => props.theme.midtWhite};
     box-shadow: inset 0 0.1rem 0.2rem rgba(0, 0, 0, 0.4),
       0 0.2rem 0.2rem rgba(140, 140, 140, 0.2);
   }
@@ -26,7 +26,7 @@ export const SearchSection = styled.div`
     padding: 0 1rem;
     border-radius: 0.8rem;
     transition: 0.25s ease;
-    background-color: #f4f4f5;
+    background-color: ${(props) => props.theme.midtWhite};
     box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2),
       inset 0 0.2rem 0.2rem rgba(140, 140, 140, 0.2);
     color: ${(props) => props.theme.black300};
@@ -34,7 +34,8 @@ export const SearchSection = styled.div`
     &:hover {
       color: #62b8b8;
       cursor: pointer;
-      box-shadow: none;
+      box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2),
+        inset 0 0.2rem 0.2rem rgba(140, 140, 140, 0.2);
     }
     &.clear {
       position: absolute;
@@ -44,10 +45,8 @@ export const SearchSection = styled.div`
       width: 3.8rem;
       border-radius: 100%;
       &:hover {
-        transform: rotate(180deg);
+        transform: rotate(90deg);
         color: #f00;
-        box-shadow: inset 0 0 0.2rem rgba(0, 0, 0, 0.4),
-          0 0 0.2rem rgba(140, 140, 140, 0.2);
       }
     }
   }
