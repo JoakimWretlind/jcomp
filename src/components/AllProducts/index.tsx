@@ -9,6 +9,7 @@ import { Searchbar } from "../Searchbar";
 export const AllProducts = () => {
   const [search, setSearch] = useState<string>("");
   const { products } = useProductContext();
+
   return (
     <>
       <Searchbar setSearch={setSearch} />
