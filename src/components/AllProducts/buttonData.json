@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "title": "all",
+    "path": ""
+  },
+  {
+    "id": 2,
+    "title": "keyboards",
+    "path": "keyboard"
+  },
+  {
+    "id": 3,
+    "title": "laptops",
+    "path": "laptop"
+  },
+  {
+    "id": 4,
+    "title": "mice",
+    "path": "mouse"
+  },
+  {
+    "id": 5,
+    "title": "screens",
+    "path": "screen"
+  }
+]
