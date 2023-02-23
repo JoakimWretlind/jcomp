@@ -27,7 +27,9 @@ export const GlobalStyle = createGlobalStyle`
 
 html {
   font-size: 62.5%;
+
 }
+
 
 body {
   box-sizing: border-box;
@@ -35,6 +37,11 @@ body {
   font-family: 'montserrat',sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* overflow:scroll;
+  ::-webkit-scrollbar {
+  display: none;
+} */
+  
 }
 a {
   text-decoration: none;
