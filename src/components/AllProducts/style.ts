@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const ProductsContainer = styled.div`
   height: 100%;
+  min-height: 75vh;
   width: 100%;
   max-width: 160rem;
   display: flex;
