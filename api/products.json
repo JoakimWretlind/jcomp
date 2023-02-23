@@ -1,0 +1,352 @@
+{
+  "products": [
+    {
+      "id": "samsung_S27A700",
+      "category": "screen",
+      "brand": "samsung",
+      "model": "S27A700 IPS 4K",
+      "size": "27",
+      "price": "429",
+      "displayimage": "/resources/images/screen01_01.webp",
+      "displayDetail": "3840 x 2160 | IPS | 16:9",
+      "infoDetail": "Utforska och fördjupa dig i varje detalj. Med 4x så många pixlar som Full HD, ses varje detalj på djupet, medan mer skärmmaterial ger utrymme för att se flera verktyg, applikationer och program under dagen – vilket skapar en filmupplevelse i 4K, natt och dag. Samsung högupplösta monitorer har en IPS-panel med HDR10 som ger kristallklar färgkvalitet och en bred betraktningsvinkel på 178°.",
+      "images": [
+        {
+          "id": "1",
+          "image": "/resources/images/screen01_01.webp"
+        },
+        {
+          "id": "2",
+          "image": "/resources/images/screen01_02.webp"
+        },
+        {
+          "id": "3",
+          "image": "/resources/images/screen01_03.webp"
+        },
+        {
+          "id": "4",
+          "image": "/resources/images/screen01_04.webp"
+        }
+      ]
+    },
+    {
+      "id": "acer_CB272",
+      "category": "screen",
+      "brand": "acer",
+      "model": "CB272 IPS Pivot 75 Hz Silver",
+      "size": "27",
+      "price": "279",
+      "displayimage": "/resources/images/screen02_01.webp",
+      "displayDetail": "1920 x 1080 | IPS | 16:9",
+      "infoDetail": "CB272 är en kristallklar IPS-skärm som erbjuder full ergonomi med pivot-, tilt- och höjdjustering. Den har även 75 Hz uppdateringsfrekvens och adaptiv synkronisering för extra följsam och hackfri bild när du spelar. Med HDMI, DisplayPort och VGA får du en bred kompatibilitet med alla slags anslutningar. Flimmerfri bild samt blåjusreducering gör den till en perfekt skärm för långa kontor- eller spelsessioner. Skärmen har även 3 års garanti för extra trygghet.",
+      "images": [
+        {
+          "id": "1",
+          "image": "/resources/images/screen02_01.webp"
+        },
+        {
+          "id": "2",
+          "image": "/resources/images/screen02_02.webp"
+        },
+        {
+          "id": "3",
+          "image": "/resources/images/screen02_03.webp"
+        },
+        {
+          "id": "4",
+          "image": "/resources/images/screen02_04.webp"
+        }
+      ]
+    },
+    {
+      "id": "msi_modern",
+      "category": "laptop",
+      "brand": "msi",
+      "model": "modern",
+      "size": "14",
+      "price": "10990",
+      "displayimage": "/resources/images/laptop02_01.webp",
+      "displayDetail": "512 GB | Core i7 | Intel Iris Xe Graphics",
+      "infoDetail": "Utforska ett nytt kapitel i livet med den nya bärbara datorn MSI Modern 14. Datorn är utrustad med den senaste 12:e generationens Intel Core i7-processor och Intel Iris Xe-grafik vilket ger prestanda som stärker din dagliga produktivitet. Med en elegant och slimmad design samt en vikt på endast 1.4kg kommer Modern 14 att passa in överallt.",
+      "images": [
+        {
+          "id": "1",
+          "image": "/resources/images/laptop02_01.webp"
+        },
+        {
+          "id": "2",
+          "image": "/resources/images/laptop02_02.webp"
+        },
+        {
+          "id": "3",
+          "image": "/resources/images/laptop02_03.webp"
+        },
+        {
+          "id": "4",
+          "image": "/resources/images/laptop02_04.webp"
+        }
+      ]
+    },
+    {
+      "id": "asus_vivobook_pro_15x",
+      "category": "laptop",
+      "brand": "asus",
+      "model": "vivobook pro",
+      "size": "15.6",
+      "price": "2199",
+      "displayimage": "/resources/images/laptop03_01.webp",
+      "displayDetail": "1 TB | Ryzen 9 | Geforce RTX 3060",
+      "infoDetail": "Revolutionera din kreativa kraft med Vivobook Pro 15X OLED! Du kommer att njuta av bekväma prestanda från dess processor i AMD Ryzen 6000-serien och NVIDIA GeForce RTX 3060 GPU så att du kan förverkliga dina idéer snabbare än någonsin, och dess 15,6-tums NanoEdge OLED-skärm på 2,8K och 120 Hz kommer att ge dina ögon något behagligt att se på med sina levande och exakta färger.",
+      "images": [
+        {
+          "id": "1",
+          "image": "/resources/images/laptop03_01.webp"
+        },
+        {
+          "id": "2",
+          "image": "/resources/images/laptop03_02.webp"
+        },
+        {
+          "id": "3",
+          "image": "/resources/images/laptop03_03.webp"
+        },
+        {
+          "id": "4",
+          "image": "/resources/images/laptop03_04.webp"
+        }
+      ]
+    },
+    {
+      "id": "lenovo_yoga_slim_7",
+      "category": "laptop",
+      "brand": "lenovo",
+      "model": "yoga slim 7",
+      "size": "14",
+      "price": "1199",
+      "displayimage": "/resources/images/laptop04_01.webp",
+      "displayDetail": "16GB | Diskstorlek: 512 GB | Radeon Graphics | Ryzen 7",
+      "infoDetail": "Jobba med flera saker samtidigt med Yoga Slim 7 Pro. Denna snygga och ultratunna 14 tum bärbara dator är fullpackad med kraft. Den ger blixtsnabb prestanda med i form av en AMD Ryzen 7-processor kombinerat med en enastående 2,8K OLED-skärm med 90Hz uppdateringsfrekvens, lång batteritid och en mängd smarta funktioner som hjälper dig att utnyttja dagen till max.",
+      "images": [
+        {
+          "id": "1",
+          "image": "/resources/images/laptop04_01.webp"
+        },
+        {
+          "id": "2",
+          "image": "/resources/images/laptop04_02.webp"
+        },
+        {
+          "id": "3",
+          "image": "/resources/images/laptop04_03.webp"
+        },
+        {
+          "id": "4",
+          "image": "/resources/images/laptop04_04.webp"
+        }
+      ]
+    },
+    {
+      "id": "logitech_pro_x_superlight",
+      "category": "mouse",
+      "brand": "logitech",
+      "model": "pro X superlight",
+      "color": "black",
+      "price": "99",
+      "displayimage": "/resources/images/mouse01_01.webp",
+      "displayDetail": "Optical | Number of buttons: 5 | Wheight: 63 g",
+      "infoDetail": "PRO X Superlight är Logitechs lättaste och snabbaste PRO-mus någonsin. HERO-sensorn ger dig en otroligt exakt, snabb och konsekvent kontroll medan PTFE-skatesen ger ett snabbt och jämnt glid. PRO X Superlight väger inte mer än 63g och det utan massa onödiga hål.",
+      "images": [
+        {
+          "id": "1",
+          "image": "/resources/images/mouse01_01.webp"
+        },
+        {
+          "id": "2",
+          "image": "/resources/images/mouse01_02.webp"
+        },
+        {
+          "id": "3",
+          "image": "/resources/images/mouse01_03.webp"
+        },
+        {
+          "id": "4",
+          "image": "/resources/images/mouse01_04.webp"
+        }
+      ]
+    },
+    {
+      "id": "logitech_g_pro_gaming_keyboard",
+      "category": "keyboard",
+      "brand": "logitech",
+      "model": "G Pro Gaming keyboard",
+      "color": "black",
+      "price": "99",
+      "displayimage": "/resources/images/keyboard01_01.webp",
+      "displayDetail": "Background light | mechanical switches | USB",
+      "infoDetail": "Detta tangentbord är designat efter de exakta specifikationerna som efterfrågas av världens bästa e-sportare. Det är utrustat med brytarna GX-Blue som erbjuder en klickig upplevelse vilket är efterfrågat av många e-sportsproffs. Utöver formatet i TKL erbjuder även detta tangentbord Logitechs anpassningsbara LIGHTSYNC och en avtagbar mikro-USB-kabel.",
+      "images": [
+        {
+          "id": "1",
+          "image": "/resources/images/keyboard01_01.webp"
+        },
+        {
+          "id": "2",
+          "image": "/resources/images/keyboard01_02.webp"
+        },
+        {
+          "id": "3",
+          "image": "/resources/images/keyboard01_03.webp"
+        },
+        {
+          "id": "4",
+          "image": "/resources/images/keyboard01_04.webp"
+        }
+      ]
+    },
+    {
+      "id": "deltaco_gaming_keyboard_pk95b",
+      "category": "keyboard",
+      "brand": "deltaco",
+      "model": "gaming keyboard pk95b",
+      "color": "pink",
+      "price": "99",
+      "displayimage": "/resources/images/keyboard02_01.webp",
+      "displayDetail": "Background light | mechanical switches | Wireless",
+      "infoDetail": "När du vill kombinera 65% kompakt mekaniskt tangentbord med det rena utseendet av tangenter utan tecken samt RGB är detta tangentbord för dig! Trådlösa 65% tangentbord kan anslutas till din dator via den medföljande 2,4 GHz USB-mottagaren, Bluetooth 5.0 eller USB-C till USB-A-kabel. På så sätt kan du njuta av tangentbordet både hemma med din gaming-setup och när du är på resande fot.",
+      "images": [
+        {
+          "id": "1",
+          "image": "/resources/images/keyboard02_01.webp"
+        },
+        {
+          "id": "2",
+          "image": "/resources/images/keyboard02_02.webp"
+        },
+        {
+          "id": "3",
+          "image": "/resources/images/keyboard02_03.webp"
+        },
+        {
+          "id": "4",
+          "image": "/resources/images/keyboard02_04.webp"
+        }
+      ]
+    },
+    {
+      "id": "msi_katana_gf66",
+      "category": "laptop",
+      "brand": "MSI",
+      "model": "katana gf66",
+      "size": "15.6",
+      "price": "1399",
+      "displayimage": "/resources/images/laptop05_01.webp",
+      "displayDetail": "Geforce RTV 3060 | 8GB | Core i5",
+      "infoDetail": "MSI GF66 Katana är tillverkad i ett solitt chassi och har en modern och snygg design. Datorn är utrustad med 11:e generationens Intel Core i5-processor och kraftfulla Nvidia GeForce RTX 3060. Den har ett ergonomiskt tangentbord med röd belysning och 1,7mm taktila brytare. Tack vare bra kylning kan du förvänta dig maximal prestanda under de intensiva spelsessionerna.",
+      "images": [
+        {
+          "id": "1",
+          "image": "/resources/images/laptop05_01.webp"
+        },
+        {
+          "id": "2",
+          "image": "/resources/images/laptop05_02.webp"
+        },
+        {
+          "id": "3",
+          "image": "/resources/images/laptop05_03.webp"
+        },
+        {
+          "id": "4",
+          "image": "/resources/images/laptop05_04.webp"
+        }
+      ]
+    },
+    {
+      "id": "samsung_odyssey_g8_oled_wqhd_1800r",
+      "category": "screen",
+      "brand": "Samsung",
+      "model": "odyssey G8 Oled WGHD 1800R",
+      "size": "34",
+      "price": "1599",
+      "displayimage": "/resources/images/screen05_01.webp",
+      "displayDetail": "Geforce RTV 3050 | 8GB | Core i5",
+      "infoDetail": "Njut av suverän gaming med Odyssey OLED G8 och Neo Quantum Processor för skarpare vita färger, djupare svarta och fantastisk färgkontrast på skärmen. Få ett övertag på motspelare med 175 Hz uppdateringsfrekvens och 1 ms svarstid. Den supertunna skärmen med metallfinish och stämningshöjande Core Lightning+ kommer att uppgradera din spelupplevelse.",
+      "images": [
+        {
+          "id": "1",
+          "image": "/resources/images/screen05_01.webp"
+        },
+        {
+          "id": "2",
+          "image": "/resources/images/screen05_02.webp"
+        },
+        {
+          "id": "3",
+          "image": "/resources/images/screen05_03.webp"
+        },
+        {
+          "id": "4",
+          "image": "/resources/images/screen05_04.webp"
+        }
+      ]
+    },
+    {
+      "id": "logitech_g502_x_plus",
+      "category": "mouse",
+      "brand": "logitech",
+      "model": "G502 X Plus",
+      "color": "black",
+      "price": "199",
+      "displayimage": "/resources/images/mouse02_01.webp",
+      "displayDetail": "Optical | Number of buttons: 10 | Wheight: 106 g | Wireless",
+      "infoDetail": "Spelmusen G502 är världens populäraste spelmus. G502 X PLUS har fått en ny utformning och design med de senaste innovationerna inom spelteknik och har nu den helt nya optiskmekaniska tekniken för brytare: LIGHTFORCE. Nu får du otrolig hastighet och tillförlitlighet samt en exakt klickupplevelse i en och samma mus.",
+      "images": [
+        {
+          "id": "1",
+          "image": "/resources/images/mouse02_01.webp"
+        },
+        {
+          "id": "2",
+          "image": "/resources/images/mouse02_02.webp"
+        },
+        {
+          "id": "3",
+          "image": "/resources/images/mouse02_03.webp"
+        },
+        {
+          "id": "4",
+          "image": "/resources/images/mouse02_04.webp"
+        }
+      ]
+    },
+    {
+      "id": "razer_huntsman_V2_analog",
+      "category": "keyboard",
+      "brand": "razer",
+      "model": "huntsman V2 analog",
+      "color": "black",
+      "price": "319",
+      "displayimage": "/resources/images/keyboard03_01.webp",
+      "displayDetail": "Backlit | USB | Wheight: 860 g",
+      "infoDetail": "Speltangentbord med Razers™ analoga, optiska switchar. Razers™ analoga, optiska switchar. PBT-tangenter med dubbeleffekt. Drivs av Razer Chroma™ RGB",
+      "images": [
+        {
+          "id": "1",
+          "image": "/resources/images/keyboard03_01.webp"
+        },
+        {
+          "id": "2",
+          "image": "/resources/images/keyboard03_02.webp"
+        },
+        {
+          "id": "3",
+          "image": "/resources/images/keyboard03_03.webp"
+        },
+        {
+          "id": "4",
+          "image": "/resources/images/keyboard03_04.webp"
+        }
+      ]
+    }
+  ]
+}
