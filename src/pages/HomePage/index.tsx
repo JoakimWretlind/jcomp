@@ -1,5 +1,12 @@
+import { AllProducts } from "../../components/AllProducts";
+import { HomePageContainer } from "./style";
+
 const HomePage = () => {
-  return <div>HomePage</div>;
+  return (
+    <HomePageContainer>
+      <AllProducts />
+    </HomePageContainer>
+  );
 };
 
 export default HomePage;
