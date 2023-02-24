@@ -2,12 +2,11 @@ import styled from "styled-components";
 
 export const ProductsPageWrapper = styled.div`
   height: 100%;
-  min-height: 72vh;
+  grid-row: 2;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 0 0rem 3rem;
 `;
 
 export const ProductsContainer = styled.div`
@@ -50,8 +49,9 @@ export const ButtonWrapper = styled.div`
     border: none;
     border-radius: 0.3rem;
     margin: 0.2rem;
-    background-color: ${(props) => props.theme.midBlack};
+    background-color: ${(props) => props.theme.blue};
     color: ${(props) => props.theme.midtWhite};
+    box-shadow: 0 0.2rem 0.4rem rgba(13, 65, 73, 0.3);
     transition: 0.25s ease;
     @media (min-width: ${(props) => props.theme.smallScreen}) {
       margin: 0.1rem;
@@ -60,8 +60,10 @@ export const ButtonWrapper = styled.div`
     &:hover {
       transform: translateY(0.1rem);
       cursor: pointer;
-      background-color: ${(props) => props.theme.gray};
+      background-color: ${(props) => props.theme.lightBlue};
       color: #222;
+      box-shadow: 0 -0.1rem 0.2rem rgba(26, 153, 173, 0.3),
+        inset 0 -0.1rem 0.2rem rgba(255, 255, 255, 1);
     }
   }
 `;

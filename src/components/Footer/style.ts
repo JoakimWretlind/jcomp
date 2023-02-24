@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const FooterSection = styled.footer`
-  height: 12rem;
+  grid-row: 3;
+  height: 100%;
   width: 100%;
   margin-top: 5rem;
   display: flex;
