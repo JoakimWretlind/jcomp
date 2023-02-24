@@ -1,7 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 
 export const searchTheme = {
-  lightBlue: "#9ED8F5",
+  lightBlue: "hsl(188, 94%, 89%)",
+  blue: "hsl(188, 74%, 39%)",
   brightWhite: "hsl(0, 0%, 98%)",
   midtWhite: "hsl(240, 5%, 96%)",
   gray: "hsl(0, 0%, 70%)",
