@@ -6,7 +6,6 @@ type DetailProps = {
 
 export const ProductsPageWrapper = styled.div`
   height: min-content;
-  grid-row: 2;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -16,18 +15,11 @@ export const ProductsPageWrapper = styled.div`
 export const ProductsContainer = styled.div`
   height: 100%;
   width: 100%;
-  max-width: 160rem;
+  max-width: 166rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-`;
-
-export const ItemContainer = styled.div`
-  height: min-content;
-  width: 34rem;
-  padding: 1rem;
-  aspect-ratio: 16/7;
 `;
 
 export const ButtonWrapper = styled.div`
