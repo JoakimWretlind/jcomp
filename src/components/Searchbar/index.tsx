@@ -1,6 +1,11 @@
 import { useRef, KeyboardEvent, Dispatch, SetStateAction } from "react";
-import { Buttonss } from "../ui/Button";
-import { SearchSection, Label, SearchContainer, Button } from "./style";
+import {
+  SearchSection,
+  Label,
+  SearchContainer,
+  Button,
+  ButtonContainer,
+} from "./style";
 
 // A variable to set the number of unique searchvalues => separate variable = easy to change.
 const searches: number = 4;
@@ -67,20 +72,22 @@ export const Searchbar = ({ setSearch }: SearchProps) => {
           </Label>
         </form>
       </SearchContainer>
-      <Button
-        className="clear"
-        onClick={() => handleClear()}
-        aria-label="clear searchbar"
-      >
-        clear
-      </Button>
-      <Button
-        onClick={handleSearch}
-        aria-label="search product"
-        className="search"
-      >
-        search
-      </Button>
+      <ButtonContainer>
+        <Button
+          className="clear"
+          onClick={() => handleClear()}
+          aria-label="clear searchbar"
+        >
+          clear
+        </Button>
+        <Button
+          onClick={handleSearch}
+          aria-label="search product"
+          className="search"
+        >
+          search
+        </Button>
+      </ButtonContainer>
     </SearchSection>
   );
 };
