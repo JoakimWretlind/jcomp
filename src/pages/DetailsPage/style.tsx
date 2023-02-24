@@ -25,7 +25,7 @@ export const DetailsContainer = styled.div`
   height: min-content;
   width: max-content;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 `;
 
@@ -37,14 +37,14 @@ export const AllImagesContainer = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: 0 2rem;
-  max-width: 62rem;
+  max-width: 70rem;
+  padding-right: 4rem;
 `;
 
 export const ImgContainer = styled.div`
   position: relative;
-  height: 22rem;
-  width: 28rem;
+  height: 23rem;
+  width: clamp(25rem, 47%, 31rem);
   margin: 1rem;
   padding: 1.4rem;
   display: flex;
@@ -70,12 +70,11 @@ export const ImgContainer = styled.div`
 
 export const InfoContainer = styled.div`
   width: 100%;
-  padding: 2rem 1rem;
+  padding: 2rem;
   border-radius: 0.4rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 0 2rem;
   background-color: ${(props) => props.theme.midWhite};
   box-shadow: inset 0 0.1rem 0.2rem rgba(0, 0, 0, 1),
     inset 0 -0.2rem 0.4rem rgba(255, 255, 255, 1);
