@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useProductContext } from "../../components/context/ProductsProvider";
 import IProducts, { IImages } from "../../components/interfaces/IProducts";
 import {
@@ -11,6 +11,7 @@ import {
   TextPane,
 } from "./style";
 import { AiOutlineArrowLeft } from "react-icons/ai";
+import { motion } from "framer-motion";
 
 const DetailsPage = () => {
   let { productID } = useParams();
@@ -34,7 +35,13 @@ const DetailsPage = () => {
     } = product;
 
     return (
-      <DetailsWrapper key={id}>
+      <DetailsWrapper
+        key={id}
+        as={motion.div}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
         <h2>{`${brand} ${model}`}</h2>
         <DetailsContainer>
           <AllImagesContainer>
@@ -64,8 +71,7 @@ const DetailsPage = () => {
       </DetailsWrapper>
     );
   } catch (err) {
-    console.log(err);
-    return <h1>err</h1>;
+    return <h1>oops</h1>;
   }
 };
 

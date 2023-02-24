@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+type DetailProps = {
+  isDetails: boolean;
+};
+
 export const ProductsPageWrapper = styled.div`
   height: min-content;
   grid-row: 2;
@@ -66,4 +70,13 @@ export const ButtonWrapper = styled.div`
         inset 0 -0.1rem 0.2rem rgba(255, 255, 255, 1);
     }
   }
+`;
+
+export const Overlay = styled.div<DetailProps>`
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  // width (or height) has to be dynamic not to cover the open page
+  width: ${({ isDetails }) => (isDetails ? "100vw" : "0vw")};
 `;
