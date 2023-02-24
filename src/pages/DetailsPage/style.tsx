@@ -9,9 +9,8 @@ export const DetailsWrapper = styled.div`
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  padding: 7rem 3rem 0;
   h2 {
     font-size: 3rem;
     font-weight: 300;
@@ -50,7 +49,7 @@ export const ImgContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f4f4f5;
+  background-color: ${(props) => props.theme.midWhite};
   border-radius: 1rem;
   box-shadow: 0 0.2rem 0.6rem rgb(0, 0, 0);
   img {
@@ -61,8 +60,6 @@ export const ImgContainer = styled.div`
 `;
 
 export const InfoContainer = styled.div`
-  /* width: 40%;
-  max-width: 40rem; */
   width: 100%;
   padding: 2rem 1rem;
   border-radius: 0.4rem;
@@ -71,7 +68,7 @@ export const InfoContainer = styled.div`
   justify-content: space-between;
   box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.2);
   margin: 0 2rem;
-  background-color: #f4f4f5;
+  background-color: ${(props) => props.theme.midWhite};
   h4 {
     font-size: 2.4rem;
     letter-spacing: 0.2rem;
@@ -82,7 +79,7 @@ export const InfoContainer = styled.div`
     line-height: 1.4;
     letter-spacing: 0.1rem;
     margin-bottom: 1.4rem;
-    color: #222;
+    color: ${(props) => props.theme.darkBlack};
     &.price {
       font-weight: 700;
       font-size: 1.5rem;
@@ -107,16 +104,21 @@ export const Links = styled(Link)`
   justify-content: center;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #f4f4f5;
-  color: #555;
+  background-color: ${(props) => props.theme.blue};
+  color: ${(props) => props.theme.brightWhite};
   font-size: 1.4rem;
   font-weight: 700;
   letter-spacing: 0.1rem;
-  transition: 0.25s ease;
+  transition: 0.3s ease;
   p {
     padding-left: 0.5rem;
   }
   &:hover {
-    background-color: #f00;
+    transform: translateY(0.1rem);
+    cursor: pointer;
+    background-color: ${(props) => props.theme.lightBlue};
+    color: ${(props) => props.theme.darkBlack};
+    box-shadow: 0 -0.1rem 0.2rem rgba(26, 153, 173, 0.3),
+      inset 0 -0.1rem 0.2rem rgba(255, 255, 255, 1);
   }
 `;
