@@ -6,7 +6,13 @@ export const SearchSection = styled.div`
   max-width: 40rem;
   margin: 3rem 0 2rem 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  @media (min-width: ${(props) => props.theme.smallScreen}) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 `;
 
 export const SearchContainer = styled.div`
@@ -33,6 +39,14 @@ export const Label = styled.label`
     outline: none;
     border: none;
     background-color: transparent;
+  }
+`;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  margin-top: 2rem;
+  @media (min-width: ${(props) => props.theme.smallScreen}) {
+    margin-top: 0;
   }
 `;
 
