@@ -14,7 +14,7 @@ export const StaggerTransition = () => {
           initial={{ translateY: i % 2 === 0 ? "-100vh" : "100vh" }}
           animate={{ translateY: 0 }}
           transition={{
-            duration: 0.3,
+            duration: 0.25,
             delay: i * 0.075,
             ease: [0.5, 0.11, 0.45, 0.15],
           }}

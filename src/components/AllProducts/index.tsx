@@ -14,6 +14,7 @@ import { Searchbar } from "../Searchbar";
 import buttonData from "./buttonData.json";
 import { StaggerTransition } from "../animations/pageTransitions/StaggerTransition";
 import { FadeInTransition } from "../animations/pageTransitions/fadeInTransition";
+import { motion } from "framer-motion";
 
 type ButtonProps = {
   id: number;
@@ -36,8 +37,21 @@ export const AllProducts = () => {
 
   return (
     <>
-      <FadeInTransition />
-      <ProductsPageWrapper>
+      <ProductsPageWrapper
+        as={motion.div}
+        initial={{ opacity: 0, scale: 0.97 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.35,
+          ease: [0.5, 0.11, 0.45, 0.15],
+        }}
+        exit={{
+          opacity: 1,
+          transition: {
+            delay: 0.5,
+          },
+        }}
+      >
         <Searchbar setSearch={setSearch} />
         <ButtonWrapper>
           {buttonData.map((btn: ButtonProps) => {

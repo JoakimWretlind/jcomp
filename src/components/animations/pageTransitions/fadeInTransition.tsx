@@ -11,9 +11,6 @@ export const FadeInTransition = ({ children }: any) => {
           delay: 0.55,
         },
       }}
-      transition={{
-        default: { duration: 1 },
-      }}
     >
       {children}
     </motion.div>
