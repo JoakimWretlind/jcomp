@@ -12,7 +12,7 @@ export const HomePageContainer = styled.div`
 export const H1 = styled.h1`
   grid-row: 1;
   height: 100%;
-  font-size: 3rem;
+  font-size: clamp(2rem, 8vw, 4rem);
   text-transform: capitalize;
   font-weight: 300;
   letter-spacing: 0.2rem;
