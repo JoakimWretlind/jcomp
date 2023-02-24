@@ -17,7 +17,7 @@ export const DetailsWrapper = styled.div`
     text-transform: capitalize;
     margin-bottom: 3rem;
     letter-spacing: 0.2rem;
-    color: #f4f4f5;
+    color: ${(props) => props.theme.brightWhite};
   }
 `;
 
@@ -42,6 +42,7 @@ export const AllImagesContainer = styled.div`
 `;
 
 export const ImgContainer = styled.div`
+  position: relative;
   height: 22rem;
   width: 28rem;
   margin: 1rem;
@@ -52,10 +53,18 @@ export const ImgContainer = styled.div`
   background-color: ${(props) => props.theme.midWhite};
   border-radius: 1rem;
   box-shadow: 0 0.2rem 0.6rem rgb(0, 0, 0);
+  transition: 0.3s ease;
   img {
     height: 100%;
     width: 100%;
     object-fit: contain;
+    transition: 0.7s ease;
+    filter: contrast(100%);
+  }
+  &:hover {
+    transition: 0.7s ease;
+    transform: translateY(-0.1rem);
+    filter: contrast(120%);
   }
 `;
 
