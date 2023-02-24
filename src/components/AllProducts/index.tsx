@@ -3,7 +3,6 @@ import { useProductContext } from "../context/ProductsProvider";
 import { Link } from "react-router-dom";
 import {
   ButtonWrapper,
-  ItemContainer,
   Overlay,
   ProductsContainer,
   ProductsPageWrapper,
@@ -13,7 +12,6 @@ import { useState } from "react";
 import { Searchbar } from "../Searchbar";
 import buttonData from "./buttonData.json";
 import { StaggerTransition } from "../animations/pageTransitions/StaggerTransition";
-import { FadeInTransition } from "../animations/pageTransitions/fadeInTransition";
 import { motion } from "framer-motion";
 
 type ButtonProps = {
@@ -79,14 +77,13 @@ export const AllProducts = () => {
               })
               .map((product: IProducts) => {
                 return (
-                  <ItemContainer key={product.id}>
-                    <Link
-                      onClick={() => setIsDetails(!isDetails)}
-                      to={`/products/${product.id}`}
-                    >
-                      <ProductCard {...product} />
-                    </Link>
-                  </ItemContainer>
+                  <Link
+                    key={product.id}
+                    onClick={() => setIsDetails(!isDetails)}
+                    to={`/products/${product.id}`}
+                  >
+                    <ProductCard {...product} />
+                  </Link>
                 );
               })
           ) : (
