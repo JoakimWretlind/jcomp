@@ -3,11 +3,11 @@ import styled from "styled-components";
 export const ErrorContainer = styled.div`
   height: 100vh;
   width: 100%;
-  padding-bottom: 12rem;
+  padding-bottom: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${(props) => props.theme.midtWhite};
+  background-color: ${(props) => props.theme.lightWhite};
 `;
 
 export const ErrorContent = styled.div`
@@ -60,23 +60,25 @@ export const TextContainer = styled.div`
   }
   button {
     padding: 1rem 4rem;
-    background-color: ${(props) => props.theme.midBlack};
-    color: ${(props) => props.theme.midtWhite};
-    border: none;
-    outline: none;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     text-transform: capitalize;
-    font-weight: 700;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
     margin-top: 1rem;
     border-radius: 0.3rem;
+    outline: none;
+    border: none;
+    background-color: ${(props) => props.theme.blue};
+    color: ${(props) => props.theme.brightWhite};
     box-shadow: ${(props) => props.theme.buttonShadow};
     transition: 0.25s ease;
     &:hover {
-      cursor: pointer;
-      color: ${(props) => props.theme.lightBlue};
-      box-shadow: none;
       transform: translateY(0.1rem);
-      background-color: ${(props) => props.theme.buttonShadowHover};
+      cursor: pointer;
+      background-color: ${(props) => props.theme.lightBlue};
+      color: ${(props) => props.theme.darkBlack};
+      box-shadow: 0 -0.1rem 0.2rem rgba(26, 153, 173, 0.3),
+        inset 0 -0.1rem 0.2rem rgba(255, 255, 255, 1);
     }
   }
 `;

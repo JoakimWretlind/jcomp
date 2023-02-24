@@ -12,7 +12,7 @@ export const FooterSection = styled.footer`
   background-color: ${(props) => props.theme.midBlack};
   z-index: 98;
   a {
-    color: #fff;
+    color: ${(props) => props.theme.brightWhite};
     text-align: center;
     text-transform: capitalize;
     font-weight: 300;

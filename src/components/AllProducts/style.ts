@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ProductsPageWrapper = styled.div`
-  height: 100%;
+  height: min-content;
   grid-row: 2;
   display: flex;
   flex-direction: column;
@@ -50,7 +50,7 @@ export const ButtonWrapper = styled.div`
     border-radius: 0.3rem;
     margin: 0.2rem;
     background-color: ${(props) => props.theme.blue};
-    color: ${(props) => props.theme.midtWhite};
+    color: ${(props) => props.theme.brightWhite};
     box-shadow: 0 0.2rem 0.4rem rgba(13, 65, 73, 0.3);
     transition: 0.25s ease;
     @media (min-width: ${(props) => props.theme.smallScreen}) {
@@ -61,7 +61,7 @@ export const ButtonWrapper = styled.div`
       transform: translateY(0.1rem);
       cursor: pointer;
       background-color: ${(props) => props.theme.lightBlue};
-      color: #222;
+      color: ${(props) => props.theme.darkBlack};
       box-shadow: 0 -0.1rem 0.2rem rgba(26, 153, 173, 0.3),
         inset 0 -0.1rem 0.2rem rgba(255, 255, 255, 1);
     }

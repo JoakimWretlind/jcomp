@@ -1,6 +1,6 @@
 import { useRef, KeyboardEvent, Dispatch, SetStateAction } from "react";
-import { FaTimes } from "react-icons/fa";
-import { SearchSection, Label } from "./style";
+import { Buttonss } from "../ui/Button";
+import { SearchSection, Label, SearchContainer, Button } from "./style";
 
 // A variable to set the number of unique searchvalues => separate variable = easy to change.
 const searches: number = 4;
@@ -44,7 +44,7 @@ export const Searchbar = ({ setSearch }: SearchProps) => {
 
   return (
     <SearchSection>
-      <div>
+      <SearchContainer>
         <form onSubmit={(e) => e.preventDefault()} role="search">
           <Label htmlFor="text">
             <input
@@ -66,17 +66,21 @@ export const Searchbar = ({ setSearch }: SearchProps) => {
             </datalist>
           </Label>
         </form>
-        <button
-          className="clear"
-          onClick={() => handleClear()}
-          aria-label="clear searchbar"
-        >
-          <FaTimes />
-        </button>
-      </div>
-      <button onClick={handleSearch} aria-label="search product">
+      </SearchContainer>
+      <Button
+        className="clear"
+        onClick={() => handleClear()}
+        aria-label="clear searchbar"
+      >
+        clear
+      </Button>
+      <Button
+        onClick={handleSearch}
+        aria-label="search product"
+        className="search"
+      >
         search
-      </button>
+      </Button>
     </SearchSection>
   );
 };
