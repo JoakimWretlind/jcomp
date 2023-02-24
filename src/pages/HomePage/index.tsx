@@ -1,11 +1,11 @@
 import { AllProducts } from "../../components/AllProducts";
 import { Footer } from "../../components/Footer";
-import { HomePageContainer } from "./style";
+import { H1, HomePageContainer } from "./style";
 
 const HomePage = () => {
   return (
     <HomePageContainer>
-      <h1>Joakim Computers</h1>
+      <H1>Joakim Computers</H1>
       <AllProducts />
       <Footer />
     </HomePageContainer>
