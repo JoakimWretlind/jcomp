@@ -75,9 +75,10 @@ export const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.2);
   margin: 0 2rem;
   background-color: ${(props) => props.theme.midWhite};
+  box-shadow: inset 0 0.1rem 0.2rem rgba(0, 0, 0, 1),
+    inset 0 -0.2rem 0.4rem rgba(255, 255, 255, 1);
   h4 {
     font-size: 2.4rem;
     letter-spacing: 0.2rem;
