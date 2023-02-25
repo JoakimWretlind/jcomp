@@ -33,10 +33,11 @@ export const AllProducts = () => {
     }
   };
 
-  if (products?.length === 0) {
+  if (products?.length === undefined) {
     console.log("empty");
-    return null;
+    return <h1>lkajdfljf</h1>;
   } else {
+    console.log("loaded");
     return (
       <>
         <ProductsPageWrapper
