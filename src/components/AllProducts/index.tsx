@@ -33,9 +33,9 @@ export const AllProducts = () => {
     }
   };
 
-  if (products?.length === undefined) {
+  if (products === undefined) {
     setTimeout(() => {
-      return <h1>Loading...</h1>;
+      console.log("empty");
     }, 500);
   } else {
     console.log("loaded");
