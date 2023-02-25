@@ -38,6 +38,10 @@ I was going for an async/fetch function, and used useContext to store the data t
 I noticed however that 'fetch' only works on remote api:s, while for local api:s you need to use await 'import' instead
 to make it work in a live webpage. fetch will work in the dev-environment only.
 
+### Extra
+
+- I added a scrollToTop hook for mobile users. Before this, if the user scrolled down and clicked a product, the detail-page would not start from the top, but a bit further down.
+
 ## Tools
 
 <img align="left" src="https://img.shields.io/badge/-React-white?style=for-the-badge&logo=React&logoColor=#61DAFB"/>
