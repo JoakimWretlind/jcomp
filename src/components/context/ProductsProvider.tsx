@@ -20,6 +20,7 @@ export const useProductContext = () => {
 };
 
 function useProductProvider() {
+  const [loading, setLoading] = useState<boolean>(false);
   const [products, setPro] = useState<IProducts[]>();
 
   // Fetch data
@@ -27,14 +28,19 @@ function useProductProvider() {
     console.log("fetching");
     const fetchData = async () => {
       try {
+        setLoading(true);
         const res = await fetch("../../../api/products.json");
         const data = await res.json();
         setPro(data.products);
+        setLoading(false);
       } catch (err) {
-        <ErrorsPage />;
+        setLoading(false);
+        console.log(err);
+        //  <ErrorsPage />;
       }
     };
     fetchData();
+    console.log(loading);
   }, []);
 
   return { products };
