@@ -5,6 +5,7 @@ export const DetailsWrapper = styled.div`
   height: 100%;
   min-height: 100vh;
   width: 100%;
+  padding: 0 3rem;
   max-width: 160rem;
   margin: 0 auto;
   display: flex;
@@ -12,7 +13,7 @@ export const DetailsWrapper = styled.div`
   justify-content: center;
   align-items: center;
   h2 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 300;
     text-transform: capitalize;
     margin-bottom: 3rem;
@@ -22,29 +23,44 @@ export const DetailsWrapper = styled.div`
 `;
 
 export const DetailsContainer = styled.div`
-  height: min-content;
-  width: max-content;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  height: 100%;
+  width: 100%;
+  max-width: 120rem;
+  display: grid;
+  grid-template-rows: repeat(2, max-content);
+  padding-bottom: 7rem;
+  @media (min-width: ${(props) => props.theme.midScreen}) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  @media (min-width: ${(props) => props.theme.largeScreen}) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 `;
 
 export const AllImagesContainer = styled.div`
-  margin: 0 auto;
-  height: max-content;
+  grid-row: 2;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  max-width: 70rem;
-  padding-right: 4rem;
+  max-width: 71rem;
+  margin-top: 1rem;
+  @media (min-width: ${(props) => props.theme.largeScreen}) {
+    margin-top: 0;
+  }
 `;
 
 export const ImgContainer = styled.div`
   position: relative;
-  height: 23rem;
-  width: clamp(25rem, 47%, 31rem);
+  width: 17rem;
   margin: 1rem;
   padding: 1.4rem;
   display: flex;
@@ -54,6 +70,17 @@ export const ImgContainer = styled.div`
   border-radius: 1rem;
   box-shadow: 0 0.2rem 0.6rem rgb(0, 0, 0);
   transition: 0.3s ease;
+  @media (min-width: ${(props) => props.theme.smallScreen}) {
+    height: 17rem;
+    width: 21%;
+  }
+  @media (min-width: ${(props) => props.theme.midScreen}) {
+    width: clamp(16rem, 25vw, 24rem);
+  }
+  @media (min-width: ${(props) => props.theme.largeScreen}) {
+    width: clamp(23rem, 29vw, 30rem);
+    height: 23rem;
+  }
   img {
     height: 100%;
     width: 100%;
@@ -69,7 +96,10 @@ export const ImgContainer = styled.div`
 `;
 
 export const InfoContainer = styled.div`
+  grid-row: 1;
   width: 100%;
+  min-width: 26rem;
+  margin-top: 2rem;
   padding: 2rem;
   border-radius: 0.4rem;
   display: flex;
@@ -98,16 +128,24 @@ export const InfoContainer = styled.div`
 
 export const TextPane = styled.div`
   height: 100%;
-  width: 40%;
-  max-width: 40rem;
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: flex-end;
+  @media (min-width: ${(props) => props.theme.midScreen}) {
+    margin: 0;
+    width: 40%;
+    max-width: 40rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 `;
 
 export const Links = styled(Link)`
-  margin: 2rem 0 0 2rem;
+  margin-top: 2rem;
   border-radius: 0.4rem;
   display: flex;
   justify-content: center;
