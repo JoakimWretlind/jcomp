@@ -7,6 +7,7 @@ import { HomePage, DetailsPage, ErrorsPage } from "./pages";
 
 function App() {
   const location = useLocation();
+
   return (
     <>
       <GlobalStyle />
