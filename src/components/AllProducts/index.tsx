@@ -26,9 +26,7 @@ export const AllProducts = () => {
   const [isDetails, setIsDetails] = useState<boolean>(false);
 
   const handleActive = () => {
-    console.log({ products });
     if (isDetails == true) {
-      console.log("yeps");
       return <StaggerTransition />;
     }
   };
