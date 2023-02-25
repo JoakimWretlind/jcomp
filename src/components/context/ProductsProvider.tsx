@@ -24,6 +24,7 @@ function useProductProvider() {
 
   // Fetch data
   useEffect(() => {
+    console.log("fetching");
     const fetchData = async () => {
       try {
         const res = await fetch("../../../api/products.json");
