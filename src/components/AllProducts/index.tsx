@@ -34,13 +34,13 @@ export const AllProducts = () => {
   };
 
   const delay = () => {
-    if (products === undefined) {
+    if (products !== undefined) {
+      console.log("loaded");
+    } else {
       setTimeout(() => {
         console.log("undefined prods");
         delay();
       }, 500);
-    } else {
-      console.log("loaded");
     }
   };
   delay();
