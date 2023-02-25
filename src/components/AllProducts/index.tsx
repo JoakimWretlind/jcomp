@@ -34,8 +34,9 @@ export const AllProducts = () => {
   };
 
   if (products?.length === undefined) {
-    console.log("empty");
-    return <h1>lkajdfljf</h1>;
+    setTimeout(() => {
+      return <h1>Loading...</h1>;
+    }, 500);
   } else {
     console.log("loaded");
     return (
