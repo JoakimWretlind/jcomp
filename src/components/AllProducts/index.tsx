@@ -27,6 +27,7 @@ export const AllProducts = () => {
 
   const handleActive = () => {
     console.log({ products });
+    console.log("hmmm");
     if (isDetails == true) {
       console.log("yeps");
       return <StaggerTransition />;
