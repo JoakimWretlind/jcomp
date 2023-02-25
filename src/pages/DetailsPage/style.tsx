@@ -13,12 +13,16 @@ export const DetailsWrapper = styled.div`
   justify-content: center;
   align-items: center;
   h2 {
+    margin-top: 3rem;
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 300;
     text-transform: capitalize;
     margin-bottom: 3rem;
     letter-spacing: 0.2rem;
     color: ${(props) => props.theme.brightWhite};
+    @media (min-width: ${(props) => props.theme.midScreen}) {
+      margin-top: 0;
+    }
   }
 `;
 
