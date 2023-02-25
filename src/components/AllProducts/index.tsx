@@ -27,7 +27,6 @@ export const AllProducts = () => {
 
   const handleActive = () => {
     console.log({ products });
-    console.log("hmmm");
     if (isDetails == true) {
       console.log("yeps");
       return <StaggerTransition />;
@@ -35,69 +34,70 @@ export const AllProducts = () => {
   };
 
   if (products?.length === 0) {
+    console.log("empty");
     return null;
+  } else {
+    return (
+      <>
+        <ProductsPageWrapper
+          as={motion.div}
+          initial={{ opacity: 0, scale: 0.97 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.35,
+            ease: [0.5, 0.11, 0.45, 0.15],
+          }}
+          exit={{
+            opacity: 1,
+            transition: {
+              delay: 0.5,
+            },
+          }}
+        >
+          <Searchbar setSearch={setSearch} />
+          <ButtonWrapper>
+            {buttonData.map((btn: ButtonProps) => {
+              const { id, title, path } = btn;
+              return (
+                <button
+                  key={id}
+                  onClick={() => setSearch(`${path}`)}
+                  aria-label={`filter ${path}`}
+                >
+                  {title}
+                </button>
+              );
+            })}
+          </ButtonWrapper>
+          <ProductsContainer>
+            {products ? (
+              (console.log("AllProducts: ", products),
+              products
+                .filter((item: IProducts) => {
+                  return search.toLowerCase() === ""
+                    ? item
+                    : item.brand.toLowerCase().includes(search) ||
+                        item.category.toLowerCase().includes(search) ||
+                        item.model.toLowerCase().includes(search);
+                })
+                .map((product: IProducts) => {
+                  return (
+                    <Link
+                      key={product.id}
+                      onClick={() => setIsDetails(!isDetails)}
+                      to={`/products/${product.id}`}
+                    >
+                      <ProductCard {...product} />
+                    </Link>
+                  );
+                }))
+            ) : (
+              <h2>Loading...</h2>
+            )}
+          </ProductsContainer>
+          <Overlay isDetails={isDetails}>{handleActive()}</Overlay>
+        </ProductsPageWrapper>
+      </>
+    );
   }
-
-  return (
-    <>
-      <ProductsPageWrapper
-        as={motion.div}
-        initial={{ opacity: 0, scale: 0.97 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{
-          duration: 0.35,
-          ease: [0.5, 0.11, 0.45, 0.15],
-        }}
-        exit={{
-          opacity: 1,
-          transition: {
-            delay: 0.5,
-          },
-        }}
-      >
-        <Searchbar setSearch={setSearch} />
-        <ButtonWrapper>
-          {buttonData.map((btn: ButtonProps) => {
-            const { id, title, path } = btn;
-            return (
-              <button
-                key={id}
-                onClick={() => setSearch(`${path}`)}
-                aria-label={`filter ${path}`}
-              >
-                {title}
-              </button>
-            );
-          })}
-        </ButtonWrapper>
-        <ProductsContainer>
-          {products ? (
-            (console.log("AllProducts: ", products),
-            products
-              .filter((item: IProducts) => {
-                return search.toLowerCase() === ""
-                  ? item
-                  : item.brand.toLowerCase().includes(search) ||
-                      item.category.toLowerCase().includes(search) ||
-                      item.model.toLowerCase().includes(search);
-              })
-              .map((product: IProducts) => {
-                return (
-                  <Link
-                    key={product.id}
-                    onClick={() => setIsDetails(!isDetails)}
-                    to={`/products/${product.id}`}
-                  >
-                    <ProductCard {...product} />
-                  </Link>
-                );
-              }))
-          ) : (
-            <h2>Loading...</h2>
-          )}
-        </ProductsContainer>
-        <Overlay isDetails={isDetails}>{handleActive()}</Overlay>
-      </ProductsPageWrapper>
-    </>
-  );
 };
