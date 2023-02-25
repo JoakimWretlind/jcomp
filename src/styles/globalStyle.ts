@@ -18,8 +18,9 @@ export const searchTheme = {
 
   xsScreen: "380px",
   smallScreen: "620px",
+  midScreen: "720px",
   tabletScreen: "768px",
-  largeScreen: "900px",
+  largeScreen: "865px",
 };
 
 export const GlobalStyle = createGlobalStyle`
