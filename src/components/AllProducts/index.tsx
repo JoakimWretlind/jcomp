@@ -8,7 +8,7 @@ import {
   ProductsPageWrapper,
 } from "./style";
 import { ProductCard } from "../ProductCard";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Searchbar } from "../Searchbar";
 import buttonData from "./buttonData.json";
 import { StaggerTransition } from "../animations/pageTransitions/StaggerTransition";
@@ -33,6 +33,10 @@ export const AllProducts = () => {
       return <StaggerTransition />;
     }
   };
+
+  if (products?.length === 0) {
+    return null;
+  }
 
   return (
     <>
