@@ -4,6 +4,7 @@ import {
   useEffect,
   useState,
   ReactNode,
+  SetStateAction,
 } from "react";
 import { ErrorsPage } from "../../pages";
 import IProducts from "../interfaces/IProducts";
@@ -20,23 +21,22 @@ export const useProductContext = () => {
 };
 
 function useProductProvider() {
-  const [products, setPro] = useState<IProducts[]>();
+  const [products, setProducts] = useState<IProducts[] | undefined>();
 
   // Fetch data
   useEffect(() => {
     console.log("fetching ProductProvider");
     const fetchData = async () => {
       try {
-        const res = await fetch("../../../api/products.json");
-        const data = await res.json();
-        setPro(data.products);
+        const res = await import("../../../api/products.json");
+        const data = res;
+        setProducts(data.products as IProducts[]);
       } catch (err) {
         <ErrorsPage />;
       }
     };
     fetchData();
   }, []);
-
   return { products };
 }
 
