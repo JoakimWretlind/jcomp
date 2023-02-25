@@ -42,6 +42,7 @@ function useProductProvider() {
 
 const ProductsProvider = ({ children }: ProductContext) => {
   const prods: ProductContext = useProductProvider();
+  console.log("PRODS:", prods);
   return (
     <productContext.Provider value={prods}>{children}</productContext.Provider>
   );

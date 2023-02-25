@@ -33,19 +33,6 @@ export const AllProducts = () => {
     }
   };
 
-  const delay = () => {
-    if (products !== undefined) {
-      console.log("loaded");
-    } else {
-      setTimeout(() => {
-        console.log("undefined prods");
-        delay();
-      }, 500);
-    }
-  };
-  delay();
-
-  console.log("loaded");
   return (
     <>
       <ProductsPageWrapper
@@ -79,30 +66,28 @@ export const AllProducts = () => {
           })}
         </ButtonWrapper>
         <ProductsContainer>
-          {products ? (
-            (console.log("AllProducts: ", products),
-            products
-              .filter((item: IProducts) => {
-                return search.toLowerCase() === ""
-                  ? item
-                  : item.brand.toLowerCase().includes(search) ||
-                      item.category.toLowerCase().includes(search) ||
-                      item.model.toLowerCase().includes(search);
-              })
-              .map((product: IProducts) => {
-                return (
-                  <Link
-                    key={product.id}
-                    onClick={() => setIsDetails(!isDetails)}
-                    to={`/products/${product.id}`}
-                  >
-                    <ProductCard {...product} />
-                  </Link>
-                );
-              }))
-          ) : (
-            <h2>Loading...</h2>
-          )}
+          {products
+            ? (console.log("AllProducts: ", products),
+              products
+                .filter((item: IProducts) => {
+                  return search.toLowerCase() === ""
+                    ? item
+                    : item.brand.toLowerCase().includes(search) ||
+                        item.category.toLowerCase().includes(search) ||
+                        item.model.toLowerCase().includes(search);
+                })
+                .map((product: IProducts) => {
+                  return (
+                    <Link
+                      key={product.id}
+                      onClick={() => setIsDetails(!isDetails)}
+                      to={`/products/${product.id}`}
+                    >
+                      <ProductCard {...product} />
+                    </Link>
+                  );
+                }))
+            : null}
         </ProductsContainer>
         <Overlay isDetails={isDetails}>{handleActive()}</Overlay>
       </ProductsPageWrapper>
