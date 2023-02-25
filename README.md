@@ -34,8 +34,9 @@ Use any stylingtool, framework or library that fits the mission.
 
 ### Datafetching
 
-I went with an async/fetch function, and used useContext to store the data.</br>
-The reason for useContext was to have all data easily accessible when moving between the products.
+I was going for an async/fetch function, and used useContext to store the data to make it easy to access even for the details page.</br>
+I noticed however that 'fetch' only works on remote api:s, while for local api:s you need to use await 'import' instead
+to make it work in a live webpage. fetch will work in the dev-environment only.
 
 ## Tools
 
