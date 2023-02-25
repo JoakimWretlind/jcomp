@@ -68,6 +68,7 @@ export const AllProducts = () => {
         </ButtonWrapper>
         <ProductsContainer>
           {products ? (
+            (console.log("AllProducts: ", products),
             products
               .filter((item: IProducts) => {
                 return search.toLowerCase() === ""
@@ -86,7 +87,7 @@ export const AllProducts = () => {
                     <ProductCard {...product} />
                   </Link>
                 );
-              })
+              }))
           ) : (
             <h2>Loading...</h2>
           )}

@@ -20,27 +20,21 @@ export const useProductContext = () => {
 };
 
 function useProductProvider() {
-  const [loading, setLoading] = useState<boolean>(false);
   const [products, setPro] = useState<IProducts[]>();
 
   // Fetch data
   useEffect(() => {
-    console.log("fetching");
+    console.log("fetching ProductProvider");
     const fetchData = async () => {
       try {
-        setLoading(true);
         const res = await fetch("../../../api/products.json");
         const data = await res.json();
         setPro(data.products);
-        setLoading(false);
       } catch (err) {
-        setLoading(false);
-        console.log(err);
-        //  <ErrorsPage />;
+        <ErrorsPage />;
       }
     };
     fetchData();
-    console.log(loading);
   }, []);
 
   return { products };
