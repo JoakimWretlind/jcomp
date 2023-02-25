@@ -6,7 +6,9 @@ export const ProductCard = (product: IProducts) => {
     product;
   return (
     <Card>
-      <div className="left">{/* <img src={displayimage} alt="img" /> */}</div>
+      <div className="left">
+        <img src={displayimage} alt="img" />
+      </div>
       <div className="right">
         <h5>{brand}</h5>
         <h6>{category}</h6>
