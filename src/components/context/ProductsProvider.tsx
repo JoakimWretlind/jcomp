@@ -4,7 +4,6 @@ import {
   useEffect,
   useState,
   ReactNode,
-  SetStateAction,
 } from "react";
 import { ErrorsPage } from "../../pages";
 import IProducts from "../interfaces/IProducts";
@@ -23,9 +22,9 @@ export const useProductContext = () => {
 function useProductProvider() {
   const [products, setProducts] = useState<IProducts[] | undefined>();
 
-  // Fetch data
+  // Fetch data - we are using await import here (instead of await fetch),
+  // since the data is in our local files.
   useEffect(() => {
-    console.log("fetching ProductProvider");
     const fetchData = async () => {
       try {
         const res = await import("../../../api/products.json");
@@ -42,7 +41,6 @@ function useProductProvider() {
 
 const ProductsProvider = ({ children }: ProductContext) => {
   const prods: ProductContext = useProductProvider();
-  console.log("PRODS:", prods);
   return (
     <productContext.Provider value={prods}>{children}</productContext.Provider>
   );
