@@ -1,4 +1,4 @@
-## Mission
+## MISSION
 
 Create an application where products are displayed. The user will be able to click on a product to see details about that product. Further will the user to be able to see only a certain category and also search for a product.
 
@@ -31,6 +31,11 @@ Following pages shall be in the application:
 ### Styling
 
 Use any stylingtool, framework or library that fits the mission.
+
+### Datafetching
+
+I went with an async/fetch function, and used useContext to store the data.</br>
+The reason for useContext was to have all data easily accessible when moving between the products.
 
 ## Tools
 
