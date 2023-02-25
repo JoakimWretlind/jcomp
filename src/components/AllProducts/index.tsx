@@ -37,7 +37,10 @@ export const AllProducts = () => {
     if (products === undefined) {
       setTimeout(() => {
         console.log("undefined prods");
+        delay();
       }, 500);
+    } else {
+      console.log("loaded");
     }
   };
   delay();
