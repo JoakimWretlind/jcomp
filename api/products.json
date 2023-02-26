@@ -347,6 +347,93 @@
           "image": "/resources/images/keyboard03_04.webp"
         }
       ]
+    },
+    {
+      "id": "acer_aspire_5",
+      "category": "laptop",
+      "brand": "acer",
+      "model": "aspire 5",
+      "size": "14",
+      "price": "999",
+      "displayimage": "/resources/images/laptop01_01.webp",
+      "displayDetail": "Intel Iris Xw Graphics | 16GB | Core i7",
+      "infoDetail": "Nya Acer Aspire 5 är perfekt för dig som vill ha en mycket snabb allround-laptop. Den har fått ett ny design och är utrustad med de senaste komponenterna, Nya snabba Core i7 1255U-processorn i kombination med 16GB internminne och 512GB SSD PCIe Gen4 ger duktigt med kraft för de flesta ändamålen, och den Full HD-upplösta skärmen visar alla detaljer i såväl bilder som i filmer och enklare spel. Dessutom har datorn även utrustats med Wi-Fi 6E och Thunderbolt 4.",
+      "images": [
+        {
+          "id": "1",
+          "image": "/resources/images/laptop01_01.webp"
+        },
+        {
+          "id": "2",
+          "image": "/resources/images/laptop01_02.webp"
+        },
+        {
+          "id": "3",
+          "image": "/resources/images/laptop01_03.webp"
+        },
+        {
+          "id": "4",
+          "image": "/resources/images/laptop01_04.webp"
+        }
+      ]
+    },
+    {
+      "id": "apple_macbook_air_2022",
+      "category": "laptop",
+      "brand": "apple",
+      "model": "macbook air",
+      "size": "13.6",
+      "price": "1549",
+      "displayimage": "/resources/images/laptop06_01.webp",
+      "displayDetail": "M2 | 8GB | 256GB",
+      "infoDetail": "Nya MacBook Air är helt omgjord med utgångspunkt från det nya M2-chippet. Den är ofattbart tunn, otroligt snabb och strömsnål och har ett hölje helt i aluminium. Den enastående Liquid Retina-skärmen på 13,6 tum är den största – och mest ljusstarka – någonsin på en MacBook Air, med stöd för en miljard färger. Det här är den ultrasnabba, ultrakapabla datorn som du kan använda till att jobba, spela eller skapa i princip vad som helst - var som helst.",
+      "images": [
+        {
+          "id": "1",
+          "image": "/resources/images/laptop06_01.webp"
+        },
+        {
+          "id": "2",
+          "image": "/resources/images/laptop06_02.webp"
+        },
+        {
+          "id": "3",
+          "image": "/resources/images/laptop06_03.webp"
+        },
+        {
+          "id": "4",
+          "image": "/resources/images/laptop06_04.webp"
+        }
+      ]
+    },
+    {
+      "id": "contour_unimouse",
+      "category": "mouse",
+      "brand": "contour",
+      "model": "unimouse",
+      "color": "black",
+      "price": "129",
+      "displayimage": "/resources/images/mouse03_01.webp",
+      "displayDetail": "Infrared | Number of buttons: 7 | 2800 dpi | Wireless",
+      "infoDetail": "En varierad arbetsställning är grunden för en bra ergonomi. Därför har Unimouse fyra leder som kan ställas in steglöst, så att du kan hitta den handställning som passar dig bäst. Med Unimouse kan du enkelt variera din handställning under arbetet. På så sätt använder du olika muskler och undviker att kroppen utsätts för statisk belastning.",
+      "images": [
+        {
+          "id": "1",
+          "image": "/resources/images/mouse03_01.webp"
+        },
+        {
+          "id": "2",
+          "image": "/resources/images/mouse03_02.webp"
+        },
+        {
+          "id": "3",
+          "image": "/resources/images/mouse03_03.webp"
+        },
+        {
+          "id": "4",
+          "image": "/resources/images/mouse03_04.webp"
+        }
+      ]
     }
   ]
 }
