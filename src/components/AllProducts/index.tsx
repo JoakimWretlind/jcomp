@@ -3,16 +3,17 @@ import { useProductContext } from "../context/ProductsProvider";
 import { Link } from "react-router-dom";
 import {
   ButtonWrapper,
+  CardContainer,
   Overlay,
-  ProductsContainer,
   ProductsPageWrapper,
 } from "./style";
 import { ProductCard } from "../ProductCard";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Searchbar } from "../Searchbar";
 import buttonData from "./buttonData.json";
 import { StaggerTransition } from "../animations/pageTransitions/StaggerTransition";
 import { motion } from "framer-motion";
+import { SectionWrapper } from "../ProductCard/style";
 
 type ButtonProps = {
   id: number;
@@ -63,30 +64,40 @@ export const AllProducts = () => {
             );
           })}
         </ButtonWrapper>
-        <ProductsContainer>
-          {products
-            ? (console.log("AllProducts: ", products),
-              products
-                .filter((item: IProducts) => {
-                  return search.toLowerCase() === ""
-                    ? item
-                    : item.brand.toLowerCase().includes(search) ||
-                        item.category.toLowerCase().includes(search) ||
-                        item.model.toLowerCase().includes(search);
-                })
-                .map((product: IProducts) => {
-                  return (
-                    <Link
-                      key={product.id}
-                      onClick={() => setIsDetails(!isDetails)}
-                      to={`/products/${product.id}`}
-                    >
-                      <ProductCard {...product} />
-                    </Link>
-                  );
-                }))
-            : null}
-        </ProductsContainer>
+        <SectionWrapper>
+          <CardContainer>
+            {products
+              ? products
+                  .filter((item: IProducts) => {
+                    return search.toLowerCase() === ""
+                      ? item
+                      : item.brand.toLowerCase().includes(search) ||
+                          item.category.toLowerCase().includes(search) ||
+                          item.model.toLowerCase().includes(search);
+                  })
+                  .map((product: IProducts) => {
+                    return (
+                      <motion.div
+                        key={product.id}
+                        layout
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.5 }}
+                      >
+                        <Link
+                          key={product.id}
+                          to={`/products/${product.id}`}
+                          onClick={() => setIsDetails(!isDetails)}
+                        >
+                          <ProductCard {...product} />
+                        </Link>
+                      </motion.div>
+                    );
+                  })
+              : null}
+          </CardContainer>
+        </SectionWrapper>
         <Overlay isDetails={isDetails}>{handleActive()}</Overlay>
       </ProductsPageWrapper>
     </>
