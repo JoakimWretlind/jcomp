@@ -3,33 +3,33 @@ import styled, { keyframes } from "styled-components";
 const textboxAnimationS = keyframes`
     0%{
         top: -20vh;
-        left: 40%;
+        left: 10%;
         width: 4rem;
         transform: scale(1);
         animation-timing-function:cubic-bezier(0.215, 0.61, 0.355, 1);
     }
     23%{
         top: 45%;
-        left: 40%;
+        left: 10%;
         width: 4rem;
         transform: scale(1);
     }
     50%{
         top: 45%;
-        left: 40%;
+        left: 10%;
         width: 24.8rem;
         transform: scale(1);
     }
     73%{
         top: 45%;
-        left: 40%;
+        left: 10%;
         width: 24.8rem;
         transform: scale(1);
         opacity: 1;
     } 
     99%{
         top: 3rem;
-        left: 40%;
+        left: 10%;
         width: 24.8rem;
         transform: scale(0.6);
         opacity: 0;        
