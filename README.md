@@ -31,6 +31,9 @@ Following pages shall be in the application:
 ### Styling
 
 Use any stylingtool, framework or library that fits the mission.
+</br></br>
+
+## Solutions
 
 ### Datafetching
 
@@ -38,9 +41,22 @@ I was going for an async/fetch function, and used useContext to store the data t
 I noticed however that 'fetch' only works on remote api:s, while for local api:s you need to use await 'import' instead
 to make it work in a live webpage. fetch will work in the dev-environment only.
 
+### Searchbar
+
+Although useRef is typically used to manipulate the UI, it can also store data. The benefit of useRef over useState is that useState will re-render every button pressed by the user. I also skipped useDebounce since I didn't want to care whether the user is a fast or slow typer.
+
+### Filterbuttons
+
+I went very simple here and used the previous searchfunction that I made for the searchbar. For each button, I just added a searchphrase that matched each category and passed that value as a searchphrase.
+
+### Styling
+
+The app is styled with styled-components. The animations are done with keyframes and the Famer-motion library.</br>
+The advantage of using keyframes is that it is very easy on the computer.
+
 ### Extra
 
-- I added a scrollToTop hook for mobile users. Before this, if the user scrolled down and clicked a product, the detail-page would not start from the top, but a bit further down.
+I added a scrollToTop hook for mobile users. Before this, if the user scrolled down and clicked a product, the detail-page would not start from the top, but a bit further down.
 
 ## Tools
 
