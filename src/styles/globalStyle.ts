@@ -21,6 +21,7 @@ export const searchTheme = {
   midScreen: "720px",
   tabletScreen: "768px",
   largeScreen: "865px",
+  xlargeScreen: "1000px",
 };
 
 export const GlobalStyle = createGlobalStyle`
