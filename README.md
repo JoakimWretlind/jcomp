@@ -75,6 +75,13 @@ I added a scrollToTop hook for mobile users. Before this, if the user scrolled d
 
 ## Demo
 
+[demo](https://jcomputers.netlify.app// "Joakim Computers")
+
+![Acme Movies](/public/resources/home_01.png "landing page")
+</br>
+</br>
+![Acme Movies](/public/resources/detail_01.png "landing page")
+
 ## Run
 
 yarn dev
