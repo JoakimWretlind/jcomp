@@ -60,7 +60,7 @@ export const SkewContainer = styled.div`
   width: 100%;
   background-color: ${(props) => props.theme.blue};
   animation: ${skewAnimation1} 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
-  animation-delay: 2.3s;
+  animation-delay: 2.2s;
   transform: skewY(0);
 `;
 
@@ -72,6 +72,6 @@ export const SkewContainer2 = styled.div`
   width: 100%;
   background-color: ${(props) => props.theme.midWhite};
   animation: ${skewAnimation2} 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
-  animation-delay: 2.35s;
+  animation-delay: 2.25s;
   transform: skewY(0);
 `;
