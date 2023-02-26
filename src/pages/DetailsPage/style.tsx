@@ -6,7 +6,6 @@ export const DetailsWrapper = styled.div`
   min-height: 100vh;
   width: 100%;
   padding: 0 3rem;
-  max-width: 160rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;

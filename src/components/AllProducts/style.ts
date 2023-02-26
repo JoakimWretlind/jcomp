@@ -12,14 +12,17 @@ export const ProductsPageWrapper = styled.div`
   align-items: center;
 `;
 
-export const ProductsContainer = styled.div`
-  height: 100%;
+export const CardContainer = styled.div`
   width: 100%;
-  max-width: 166rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 0 3rem;
+  @media (min-width: ${(props) => props.theme.xsScreen}) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  }
 `;
 
 export const ButtonWrapper = styled.div`

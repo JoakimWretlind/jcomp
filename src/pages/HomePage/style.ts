@@ -4,6 +4,7 @@ export const HomePageContainer = styled.div`
   height: 100%;
   min-height: 100vh;
   width: 100%;
+  margin: 0 auto;
   display: grid;
   grid-template-rows: 10vh minmax(76vh, 1fr) 14vh;
   background-color: ${(props) => props.theme.midWhite};

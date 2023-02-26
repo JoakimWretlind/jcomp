@@ -10,7 +10,7 @@ export const FooterSection = styled.footer`
   justify-content: center;
   align-items: center;
   background-color: ${(props) => props.theme.midBlack};
-  z-index: 98;
+
   a {
     color: ${(props) => props.theme.brightWhite};
     text-align: center;
