@@ -61,7 +61,7 @@ export const Searchbar = ({ setSearch }: SearchProps) => {
               return (
                 <DropdownButtton
                   key={idx}
-                  onClick={() => setSearch(`${search}`)}
+                  onClick={() => setSearch(`${search}`.toLowerCase())}
                   aria-label={`filter ${search}`}
                 >
                   {search}
