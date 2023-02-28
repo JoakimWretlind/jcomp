@@ -1,11 +1,6 @@
 import { useRef, KeyboardEvent, Dispatch, SetStateAction } from "react";
-import {
-  SearchSection,
-  Label,
-  SearchContainer,
-  Button,
-  ButtonContainer,
-} from "./style";
+import { Button, Dropdown, Form, SearchContainer } from "./style";
+import { BiSearch } from "react-icons/bi";
 
 // A variable to set the number of unique searchvalues => separate variable = easy to change.
 const searches: number = 4;
@@ -40,54 +35,38 @@ export const Searchbar = ({ setSearch }: SearchProps) => {
     e.key == "Enter" ? handleSearch() : null;
   };
 
-  const handleClear = () => {
-    setSearch(String(""));
-    if (inputRef?.current?.value != null) {
-      inputRef.current.value = "";
-    }
-  };
-
   return (
-    <SearchSection>
-      <SearchContainer>
-        <form onSubmit={(e) => e.preventDefault()} role="search">
-          <Label htmlFor="text">
-            <input
-              type="text"
-              autoComplete="off"
-              placeholder="Search Product..."
-              list="searches"
-              ref={inputRef}
-              onKeyDown={onEnter}
-            />
-            <datalist id="searches">
-              {searchArray.map((item: string, idx: number) => {
-                return (
-                  <option id="option" key={idx}>
-                    {item}
-                  </option>
-                );
-              })}
-            </datalist>
-          </Label>
-        </form>
-      </SearchContainer>
-      <ButtonContainer>
-        <Button
-          className="clear"
-          onClick={() => handleClear()}
-          aria-label="clear searchbar"
-        >
-          clear
-        </Button>
-        <Button
-          onClick={handleSearch}
-          aria-label="search product"
-          className="search"
-        >
-          search
-        </Button>
-      </ButtonContainer>
-    </SearchSection>
+    <SearchContainer>
+      <Form onSubmit={(e) => e.preventDefault()} role="search">
+        <label htmlFor="text">
+          <input
+            type="search"
+            autoComplete="off"
+            placeholder="Search Product..."
+            list="searches"
+            ref={inputRef}
+            onKeyDown={onEnter}
+          />
+        </label>
+        <Dropdown>
+          <ul>
+            {searchArray.map((search: string, idx: number) => {
+              return (
+                <li key={idx} onClick={() => setSearch(`${search}`)}>
+                  {search}
+                </li>
+              );
+            })}
+          </ul>
+        </Dropdown>
+      </Form>
+      <Button
+        onClick={handleSearch}
+        aria-label="search product"
+        className="search"
+      >
+        <BiSearch />
+      </Button>
+    </SearchContainer>
   );
 };
