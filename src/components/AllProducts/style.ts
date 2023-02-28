@@ -75,3 +75,19 @@ export const Overlay = styled.div<DetailProps>`
   // width (or height) has to be dynamic not to cover the open page
   width: ${({ isDetails }) => (isDetails ? "100vw" : "0vw")};
 `;
+
+export const H2 = styled.h2`
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: (2rem);
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  @media (min-width: ${(props) => props.theme.smallScreen}) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+`;
