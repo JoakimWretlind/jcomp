@@ -10,7 +10,6 @@ import {
 } from "./style";
 import { ProductCard } from "../ProductCard";
 import { useState } from "react";
-
 import buttonData from "./buttonData.json";
 import { StaggerTransition } from "../animations/pageTransitions/StaggerTransition";
 import { motion } from "framer-motion";
