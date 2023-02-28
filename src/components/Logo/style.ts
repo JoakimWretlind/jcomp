@@ -2,25 +2,27 @@ import styled, { keyframes } from "styled-components";
 
 const textboxAnimationS = keyframes`
     0%{
+        opacity: 0.3;
         top: -20vh;
         left: 10%;
         width: 4rem;
         transform: scale(1);
-        animation-timing-function:cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function:cubic-bezier(0.215, 0.61, 0.355, 1);        
     }
     23%{
+        opacity: 1;
         top: 45%;
         left: 10%;
         width: 4rem;
         transform: scale(1);
     }
-    50%{
+    50%{    
         top: 45%;
         left: 10%;
         width: 24.8rem;
         transform: scale(1);
     }
-    73%{
+    73%{ 
         top: 45%;
         left: 10%;
         width: 24.8rem;
@@ -28,6 +30,7 @@ const textboxAnimationS = keyframes`
         opacity: 1;
     } 
     99%{
+        opacity: 1;
         top: 3rem;
         left: 10%;
         width: 24.8rem;
@@ -41,6 +44,7 @@ const textboxAnimationS = keyframes`
 
 const textboxAnimationM = keyframes`
     0%{
+        opacity: 0.3;
         top: -20vh;
         left: 40%;
         width: 4rem;
@@ -48,6 +52,7 @@ const textboxAnimationM = keyframes`
         animation-timing-function:cubic-bezier(0.215, 0.61, 0.355, 1);
     }
     23%{
+        opacity: 1;
         top: 45%;
         left: 40%;
         width: 4rem;
@@ -66,6 +71,7 @@ const textboxAnimationM = keyframes`
         transform: scale(1);
     } 
     100%{
+        opacity: 1;
         top: 3rem;
         left: 0rem;
         width: 24.8rem;
@@ -75,7 +81,8 @@ const textboxAnimationM = keyframes`
 `;
 
 const textboxAnimation = keyframes`
-    0%{
+    0%{       
+        opacity: 0.3;
         top: -20vh;
         left: 40%;
         width: 4rem;
@@ -83,29 +90,30 @@ const textboxAnimation = keyframes`
         animation-timing-function:cubic-bezier(0.215, 0.61, 0.355, 1);
     }
     23%{
+        opacity: 1;
         top: 45%;
         left: 40%;
         width: 4rem;
         transform: scale(1);
     }
-    50%{
+    50%{    
         top: 45%;
         left: 40%;
         width: 24.8rem;
         transform: scale(1);
     }
-    73%{
+    73%{     
         top: 45%;
         left: 40%;
         width: 24.8rem;
         transform: scale(1);
     } 
     100%{
+        opacity: 1;
         top: 3rem;
         left: 3rem;
         width: 24.8rem;
-        transform: scale(0.8);
-        
+        transform: scale(0.8);        
     }
 `;
 
@@ -114,11 +122,12 @@ export const TextBox = styled.div`
   overflow: hidden;
   height: min-content;
   width: 4rem;
-  top: -20vh;
+  top: -10vh;
   left: 30%;
   animation: ${textboxAnimationS} 1.7s forwards;
   animation-delay: 0.4s;
   z-index: 100;
+  opacity: 0;
   @media (min-width: ${(props) => props.theme.largeScreen}) {
     animation: ${textboxAnimationM} 1.7s forwards;
   }
