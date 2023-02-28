@@ -1,5 +1,12 @@
 import { useRef, KeyboardEvent, Dispatch, SetStateAction } from "react";
-import { Button, Dropdown, Form, SearchContainer } from "./style";
+import {
+  Button,
+  ButtonContainer,
+  Dropdown,
+  DropdownButtton,
+  Form,
+  SearchContainer,
+} from "./style";
 import { BiSearch } from "react-icons/bi";
 
 // A variable to set the number of unique searchvalues => separate variable = easy to change.
@@ -49,15 +56,19 @@ export const Searchbar = ({ setSearch }: SearchProps) => {
           />
         </label>
         <Dropdown>
-          <ul>
+          <ButtonContainer>
             {searchArray.map((search: string, idx: number) => {
               return (
-                <li key={idx} onClick={() => setSearch(`${search}`)}>
+                <DropdownButtton
+                  key={idx}
+                  onClick={() => setSearch(`${search}`)}
+                  aria-label={`filter ${search}`}
+                >
                   {search}
-                </li>
+                </DropdownButtton>
               );
             })}
-          </ul>
+          </ButtonContainer>
         </Dropdown>
       </Form>
       <Button

@@ -24,7 +24,8 @@ export const Dropdown = styled.div`
   border-radius: 0.3rem;
   display: none;
   height: 0;
-  ul {
+  z-index: 2;
+  /* ul {
     width: 100%;
   }
   li {
@@ -44,6 +45,32 @@ export const Dropdown = styled.div`
       background-color: ${(props) => props.theme.gray};
       color: ${(props) => props.theme.midBlack};
     }
+  } */
+`;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: max-content;
+  min-width: 10rem;
+  background-color: #222;
+`;
+
+export const DropdownButtton = styled.button`
+  padding: 0.8rem;
+  border: none;
+  outline: none;
+  width: 100%;
+  background-color: #222;
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  &:hover {
+    cursor: pointer;
+    background-color: #555;
   }
 `;
 
