@@ -7,6 +7,7 @@ import { useState } from "react";
 import buttonData from "./buttonData.json";
 import { SectionWrapper } from "../ProductCard/style";
 import { Searchbar } from "../Searchbar";
+import { motion } from "framer-motion";
 
 type ButtonProps = {
   id: number;
@@ -61,7 +62,15 @@ export const AllProducts = () => {
                     to={`/products/${product.id}`}
                     onClick={() => setIsDetails(!isDetails)}
                   >
-                    <ProductCard {...product} />
+                    <motion.div
+                      layout
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.5 }}
+                    >
+                      <ProductCard {...product} />
+                    </motion.div>
                   </Link>
                 );
               })
