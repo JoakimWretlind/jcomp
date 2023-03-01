@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { IoReturnUpBackOutline } from "react-icons/io5";
 
 export const DetailsWrapper = styled.div`
   height: 100%;
@@ -126,6 +127,27 @@ export const InfoContainer = styled.div`
       font-weight: 700;
       font-size: 1.5rem;
     }
+  }
+`;
+
+export const BackIcon = styled(Link)`
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 1rem 0 2rem -0.5rem;
+  font-size: clamp(2.2rem, 6.4vw, 3.2rem);
+  color: ${(props) => props.theme.blue};
+  transition: 0.25s ease;
+  &:hover {
+    transform: translateY(0.1rem);
+    cursor: pointer;
+    background-color: ${(props) => props.theme.lightBlue};
+    color: ${(props) => props.theme.darkBlack};
+    box-shadow: 0 -0.1rem 0.2rem rgba(26, 153, 173, 0.3),
+      inset 0 -0.1rem 0.2rem rgba(255, 255, 255, 1);
   }
 `;
 
