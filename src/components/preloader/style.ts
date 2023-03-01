@@ -43,7 +43,8 @@ export const MainContainer = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   width: 100%;
   background-color: ${(props) => props.theme.midBlack};
   z-index: 100;
