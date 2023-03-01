@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+export const Wrapper = styled.div`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+`;
+
 export const HomePageContainer = styled.div`
   height: 100%;
   min-height: 100vh;
