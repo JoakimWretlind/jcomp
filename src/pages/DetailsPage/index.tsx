@@ -38,9 +38,10 @@ const DetailsPage = () => {
       <DetailsWrapper
         key={id}
         as={motion.div}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
+        initial={{ scaleX: 0, x: "60vw" }}
+        animate={{ scaleX: 1, x: "0" }}
+        exit={{ scaleX: 0, x: "60vw" }}
+        transition={{ duration: 0.5 }}
       >
         <h2>{`${brand} ${model}`}</h2>
         <DetailsContainer>
