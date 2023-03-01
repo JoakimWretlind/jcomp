@@ -11,7 +11,6 @@ import {
   Links,
   TextPane,
 } from "./style";
-import { AiOutlineArrowLeft } from "react-icons/ai";
 import { motion } from "framer-motion";
 import { useTiming } from "../../components/hooks/useTiming";
 import { IoReturnUpBackOutline } from "react-icons/io5";
@@ -63,7 +62,6 @@ const DetailsPage = () => {
               <BackIcon to="/">
                 <IoReturnUpBackOutline />
               </BackIcon>
-
               <h4>{category}</h4>
               <p>{infoDetail}</p>
               {size ? <p>Storlek: {size}"</p> : null}
