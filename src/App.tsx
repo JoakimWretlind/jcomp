@@ -3,9 +3,13 @@ import { ThemeProvider } from "styled-components";
 import ProductsProvider from "./components/context/ProductsProvider";
 import { AnimatePresence } from "framer-motion";
 import { Routes, Route, useLocation } from "react-router-dom";
-import { HomePage, DetailsPage, ErrorsPage } from "./pages";
+import { DetailsPage, ErrorsPage } from "./pages";
 import { Preloader } from "./components/preloader";
 import { Logo } from "./components/Logo";
+import { lazy, LazyExoticComponent, ComponentType } from "react";
+export const HomePage: LazyExoticComponent<ComponentType<any>> = lazy(
+  () => import("./pages/HomePage")
+);
 
 function App() {
   const location = useLocation();
