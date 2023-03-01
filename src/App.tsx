@@ -24,7 +24,7 @@ function App() {
         <Preloader />
         <Logo />
         <ProductsProvider>
-          <AnimatePresence mode="wait">
+          <AnimatePresence mode="wait" initial={false}>
             <Routes location={location} key={location.pathname}>
               <Route path="/" element={<HomePage />} />
               <Route path="/products/:productID" element={<DetailsPage />} />
