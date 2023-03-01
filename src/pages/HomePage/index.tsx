@@ -17,10 +17,19 @@ const HomePage = () => {
       // animate={{ scaleX: 1, x: "0" }}
       // exit={{ scaleX: 0, x: "-60vw" }}
       // transition={{ duration: `${timing}` }}
+      // initial={{ x: "-100vw" }}
+      // animate={{ x: 0 }}
+      // exit={{ x: "-100vw" }}
+      // transition={{ duration: 0.5 }}
       initial={{ x: "-100vw" }}
-      animate={{ x: 0 }}
-      exit={{ x: "-100vw" }}
-      transition={{ duration: 0.5 }}
+      animate={{
+        x: "70px",
+      }}
+      transition={{
+        x: { type: "spring", stiffness: 50 },
+        duration: 0.8,
+        delay: 0,
+      }}
     >
       <H1>Joakim Computers</H1>
       <AllProducts />

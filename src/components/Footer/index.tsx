@@ -1,5 +1,4 @@
 import { FooterSection } from "./style";
-//import github from "../../../public/resources/github.png";
 import github from "../../resources/github.png";
 
 export const Footer = () => {
