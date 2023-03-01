@@ -1,7 +1,7 @@
 import IProducts from "../interfaces/IProducts";
 import { Card, Left, Right } from "./style";
 
-export const ProductCard = (product: IProducts) => {
+const ProductCard = (product: IProducts) => {
   const { displayimage, brand, category, model, displayDetail, price } =
     product;
   return (
@@ -20,3 +20,5 @@ export const ProductCard = (product: IProducts) => {
     </Card>
   );
 };
+
+export default ProductCard;

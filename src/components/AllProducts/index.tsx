@@ -2,12 +2,16 @@ import IProducts from "../interfaces/IProducts";
 import { useProductContext } from "../context/ProductsProvider";
 import { Link } from "react-router-dom";
 import { ButtonWrapper, CardContainer, H2, ProductsPageWrapper } from "./style";
-import { ProductCard } from "../ProductCard";
-import { useState } from "react";
+import { ComponentType, lazy, LazyExoticComponent, useState } from "react";
 import buttonData from "./buttonData.json";
 import { SectionWrapper } from "../ProductCard/style";
-import { Searchbar } from "../Searchbar";
 import { motion } from "framer-motion";
+export const Searchbar: LazyExoticComponent<ComponentType<any>> = lazy(
+  () => import("../Searchbar")
+);
+export const ProductCard: LazyExoticComponent<ComponentType<any>> = lazy(
+  () => import("../ProductCard")
+);
 
 type ButtonProps = {
   id: number;
@@ -15,7 +19,7 @@ type ButtonProps = {
   path: string;
 };
 
-export const AllProducts = () => {
+const AllProducts = () => {
   const { products } = useProductContext();
   const [search, setSearch] = useState<string>("");
   const [isDetails, setIsDetails] = useState<boolean>(false);
@@ -81,3 +85,4 @@ export const AllProducts = () => {
     </>
   );
 };
+export default AllProducts;

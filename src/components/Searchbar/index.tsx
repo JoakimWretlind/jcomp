@@ -9,7 +9,7 @@ type SearchProps = {
   setSearch: Dispatch<SetStateAction<string>>;
 };
 
-export const Searchbar = ({ setSearch }: SearchProps) => {
+const Searchbar = ({ setSearch }: SearchProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
   let searchArray = JSON.parse(localStorage.getItem("searches")!) || [];
 
@@ -72,3 +72,5 @@ export const Searchbar = ({ setSearch }: SearchProps) => {
     </SearchContainer>
   );
 };
+
+export default Searchbar;
