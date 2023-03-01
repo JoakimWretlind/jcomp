@@ -1,4 +1,16 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const dropDown = keyframes`
+     0% {
+        transform: scaleY(0)
+    }
+    80% {
+        transform: scaleY(1.05)
+    }
+    100% {
+        transform: scaleY(1)
+    }
+`;
 
 export const SearchContainer = styled.div`
   width: 80%;
@@ -14,63 +26,37 @@ export const SearchContainer = styled.div`
     0 0.2rem 0.2rem rgba(140, 140, 140, 0.2);
 `;
 
-export const Dropdown = styled.div`
+export const Dropdown = styled.ul`
+  display: none;
   position: absolute;
-  top: 4rem;
+  top: 100%;
   right: 0;
   width: max-content;
-  min-width: 11rem;
+  z-index: 1;
+  transform-origin: top center;
+  animation: ${dropDown} 0.25s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
   background-color: ${(props) => props.theme.midWhite};
-  border-radius: 0.3rem;
-  display: none;
-  height: 0;
-  z-index: 2;
-  /* ul {
-    width: 100%;
+  &:hover {
+    display: block;
   }
   li {
     background-color: ${(props) => props.theme.midBlack};
     color: ${(props) => props.theme.midWhite};
     width: 100%;
+    min-width: 10rem;
+    max-width: 20rem;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 1rem 1rem 3rem;
     font-size: 1.2rem;
     letter-spacing: 0.1rem;
     margin-bottom: 0.1rem;
-    transition: 0.25s ease;
     &:hover {
       cursor: pointer;
       background-color: ${(props) => props.theme.gray};
       color: ${(props) => props.theme.midBlack};
     }
-  } */
-`;
-
-export const ButtonContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-end;
-  width: max-content;
-  min-width: 10rem;
-  background-color: #222;
-`;
-
-export const DropdownButtton = styled.button`
-  padding: 0.8rem;
-  border: none;
-  outline: none;
-  width: 100%;
-  background-color: #222;
-  color: #fff;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  &:hover {
-    cursor: pointer;
-    background-color: #555;
   }
 `;
 
@@ -79,6 +65,9 @@ export const Form = styled.form`
   display: block;
   height: 100%;
   flex: 1;
+  &:hover ${Dropdown} {
+    display: block;
+  }
   label {
     width: 100%;
     input {
@@ -86,16 +75,13 @@ export const Form = styled.form`
       flex: 1;
       height: 100%;
       width: 100%;
-      padding: 0.8rem 0.5rem 0.8rem 1rem;
+      padding: 0.8rem 0.5rem 0.8rem 1.8rem;
       font-size: 1.4rem;
       letter-spacing: 0.1rem;
       outline: none;
       border: none;
       background-color: transparent;
     }
-  }
-  &:hover ${Dropdown} {
-    display: block;
   }
 `;
 
