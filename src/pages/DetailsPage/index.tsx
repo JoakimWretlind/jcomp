@@ -14,6 +14,7 @@ import {
 import { motion } from "framer-motion";
 import { useTiming } from "../../components/hooks/useTiming";
 import { IoReturnUpBackOutline } from "react-icons/io5";
+import { Wrapper } from "../../styles/commonStyles";
 
 const DetailsPage = () => {
   let { productID } = useParams();
@@ -38,43 +39,48 @@ const DetailsPage = () => {
     } = product;
 
     return (
-      <DetailsWrapper
+      <Wrapper
         key={id}
         as={motion.div}
-        // initial={{ scaleX: 0, x: "60vw" }}
-        // animate={{ scaleX: 1, x: "0" }}
-        // exit={{ scaleX: 0, x: "60vw" }}
         initial={{ x: "100vw" }}
         animate={{ x: 0 }}
         exit={{ x: "100vw" }}
-        //transition={{ duration: `${timing}` }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: `${timing}` }}
       >
-        <h2>{`${brand} ${model}`}</h2>
-        <DetailsContainer>
-          <AllImagesContainer>
-            {images.map((image: IImages) => {
-              return (
-                <ImgContainer key={image.id}>
-                  <img src={image.image} alt={`${brand} ${model}`} />
-                </ImgContainer>
-              );
-            })}
-          </AllImagesContainer>
-          <TextPane>
-            <InfoContainer>
-              <BackIcon to="/">
-                <IoReturnUpBackOutline />
-              </BackIcon>
-              <h4>{category}</h4>
-              <p>{infoDetail}</p>
-              {size ? <p>Storlek: {size}"</p> : null}
-              {color ? <p>Färg: {color}</p> : null}
-              <p className="price">Pris: {price}$</p>
-            </InfoContainer>
-          </TextPane>
-        </DetailsContainer>
-      </DetailsWrapper>
+        <DetailsWrapper
+
+        // initial={{ scaleX: 0, x: "60vw" }}
+        // animate={{ scaleX: 1, x: "0" }}
+        // exit={{ scaleX: 0, x: "60vw" }}
+
+        //transition={{ duration: 0.5 }}
+        >
+          <h2>{`${brand} ${model}`}</h2>
+          <DetailsContainer>
+            <AllImagesContainer>
+              {images.map((image: IImages) => {
+                return (
+                  <ImgContainer key={image.id}>
+                    <img src={image.image} alt={`${brand} ${model}`} />
+                  </ImgContainer>
+                );
+              })}
+            </AllImagesContainer>
+            <TextPane>
+              <InfoContainer>
+                <BackIcon to="/">
+                  <IoReturnUpBackOutline />
+                </BackIcon>
+                <h4>{category}</h4>
+                <p>{infoDetail}</p>
+                {size ? <p>Storlek: {size}"</p> : null}
+                {color ? <p>Färg: {color}</p> : null}
+                <p className="price">Pris: {price}$</p>
+              </InfoContainer>
+            </TextPane>
+          </DetailsContainer>
+        </DetailsWrapper>
+      </Wrapper>
     );
   } catch (err) {
     return <h1>oops</h1>;
