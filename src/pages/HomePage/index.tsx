@@ -10,7 +10,7 @@ const HomePage = () => {
       initial={{ scaleX: 0, x: "-60vw" }}
       animate={{ scaleX: 1, x: "0" }}
       exit={{ scaleX: 0, x: "-60vw" }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.4 }}
     >
       <H1>Joakim Computers</H1>
       <AllProducts />

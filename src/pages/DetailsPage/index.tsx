@@ -41,7 +41,7 @@ const DetailsPage = () => {
         initial={{ scaleX: 0, x: "60vw" }}
         animate={{ scaleX: 1, x: "0" }}
         exit={{ scaleX: 0, x: "60vw" }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.4 }}
       >
         <h2>{`${brand} ${model}`}</h2>
         <DetailsContainer>
