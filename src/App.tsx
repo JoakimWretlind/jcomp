@@ -21,9 +21,9 @@ function App() {
     <>
       <GlobalStyle />
       <ThemeProvider theme={searchTheme}>
+        <Preloader />
+        <Logo />
         <ProductsProvider>
-          <Preloader />
-          <Logo />
           <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
               <Route path="/" element={<HomePage />} />

@@ -13,10 +13,14 @@ const HomePage = () => {
   return (
     <HomePageContainer
       as={motion.div}
-      initial={{ scaleX: 0, x: "-60vw" }}
-      animate={{ scaleX: 1, x: "0" }}
-      exit={{ scaleX: 0, x: "-60vw" }}
-      transition={{ duration: `${timing}` }}
+      // initial={{ scaleX: 0, x: "-60vw" }}
+      // animate={{ scaleX: 1, x: "0" }}
+      // exit={{ scaleX: 0, x: "-60vw" }}
+      // transition={{ duration: `${timing}` }}
+      initial={{ x: "-100vw" }}
+      animate={{ x: 0 }}
+      exit={{ x: "-100vw" }}
+      transition={{ duration: 0.5 }}
     >
       <H1>Joakim Computers</H1>
       <AllProducts />
