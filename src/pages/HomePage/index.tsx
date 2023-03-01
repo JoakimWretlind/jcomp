@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 import { lazy, LazyExoticComponent, ComponentType } from "react";
 import { Footer } from "../../components/Footer";
 import { useTiming } from "../../components/hooks/useTiming";
-import { H1, HomePageContainer, Wrapper } from "./style";
+import { Wrapper } from "../../styles/commonStyles";
+import { H1, HomePageContainer } from "./style";
 const AllProducts: LazyExoticComponent<ComponentType<any>> = lazy(
   () => import("../../components/AllProducts")
 );

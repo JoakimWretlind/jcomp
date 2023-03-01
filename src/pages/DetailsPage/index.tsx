@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useProductContext } from "../../components/context/ProductsProvider";
 import IProducts, { IImages } from "../../components/interfaces/IProducts";
 import {
@@ -8,7 +8,6 @@ import {
   DetailsWrapper,
   ImgContainer,
   InfoContainer,
-  Links,
   TextPane,
 } from "./style";
 import { motion } from "framer-motion";
@@ -47,14 +46,7 @@ const DetailsPage = () => {
         exit={{ x: "100vw" }}
         transition={{ duration: `${timing}` }}
       >
-        <DetailsWrapper
-
-        // initial={{ scaleX: 0, x: "60vw" }}
-        // animate={{ scaleX: 1, x: "0" }}
-        // exit={{ scaleX: 0, x: "60vw" }}
-
-        //transition={{ duration: 0.5 }}
-        >
+        <DetailsWrapper>
           <h2>{`${brand} ${model}`}</h2>
           <DetailsContainer>
             <AllImagesContainer>
