@@ -10,11 +10,13 @@ const HomePage = () => {
 
   useEffect(() => {
     if (screenWidth < 465) {
-      setTiming(0.3);
+      setTiming(0.25);
     } else if (screenWidth >= 465 && screenWidth < 768) {
-      setTiming(0.4);
+      setTiming(0.35);
+    } else if (screenWidth >= 768 && screenWidth < 2000) {
+      setTiming(0.45);
     } else {
-      setTiming(0.5);
+      setTiming(0.55);
     }
   });
 
