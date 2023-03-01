@@ -7,13 +7,13 @@
       "model": "S27A700 IPS 4K",
       "size": "27",
       "price": "429",
-      "displayimage": "src/resources/images/screen01_01.webp",
+      "displayimage": "/resources/images/screen01_01.webp",
       "displayDetail": "3840 x 2160 | IPS | 16:9",
       "infoDetail": "Utforska och fördjupa dig i varje detalj. Med 4x så många pixlar som Full HD, ses varje detalj på djupet, medan mer skärmmaterial ger utrymme för att se flera verktyg, applikationer och program under dagen – vilket skapar en filmupplevelse i 4K, natt och dag. Samsung högupplösta monitorer har en IPS-panel med HDR10 som ger kristallklar färgkvalitet och en bred betraktningsvinkel på 178°.",
       "images": [
         {
           "id": "1",
-          "image": "src/resources/images/screen01_01.webp"
+          "image": "/resources/images/screen01_01.webp"
         },
         {
           "id": "2",
