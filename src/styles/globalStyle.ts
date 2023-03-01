@@ -44,12 +44,16 @@ body {
   font-family: 'montserrat',sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+  overflow-x: hidden;
   /* overflow:scroll;
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
   ::-webkit-scrollbar {
   display: none;
-} */
-  
+}   */
 }
+
 a {
   text-decoration: none;
     }
