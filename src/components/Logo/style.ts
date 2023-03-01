@@ -17,15 +17,11 @@ const textboxAnimationS = keyframes`
         transform: scale(1);
     }
     50%{    
-        top: 45%;
-        left: 10%;
         width: 24.8rem;
-        transform: scale(1);
     }
     73%{ 
         top: 45%;
         left: 10%;
-        width: 24.8rem;
         transform: scale(1);
         opacity: 1;
     } 
@@ -58,10 +54,8 @@ const textboxAnimationM = keyframes`
         width: 4rem;
         transform: scale(1);
     }
-    50%{
-        top: 45%;
+    50%{    
         left: 40%;
-        width: 24.8rem;
         transform: scale(1);
     }
     73%{
@@ -97,10 +91,8 @@ const textboxAnimation = keyframes`
         transform: scale(1);
     }
     50%{    
-        top: 45%;
         left: 40%;
         width: 24.8rem;
-        transform: scale(1);
     }
     73%{     
         top: 45%;
@@ -121,9 +113,9 @@ export const TextBox = styled.div`
   position: absolute;
   overflow: hidden;
   height: min-content;
-  width: 4rem;
   top: -10vh;
   left: 30%;
+  width: 4rem;
   animation: ${textboxAnimationS} 1.7s forwards;
   animation-delay: 0.4s;
   z-index: 100;
