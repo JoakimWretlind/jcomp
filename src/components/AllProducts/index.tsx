@@ -58,13 +58,13 @@ const AllProducts = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{
-          duration: 0.35,
+          duration: 0.4,
           ease: [0.5, 0.11, 0.45, 0.15],
         }}
         exit={{
           opacity: 1,
           transition: {
-            delay: 0.4,
+            delay: 0.25,
           },
         }}
       >

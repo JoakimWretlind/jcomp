@@ -44,7 +44,7 @@ const DetailsPage = () => {
         as={motion.div}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, ease: [0.5, 0.11, 0.45, 0.15] }}
+        transition={{ duration: 0.4, ease: [0.5, 0.11, 0.45, 0.15] }}
         exit={{ opacity: 0 }}
       >
         <h2>{`${brand} ${model}`}</h2>
