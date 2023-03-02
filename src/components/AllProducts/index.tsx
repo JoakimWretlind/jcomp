@@ -64,7 +64,7 @@ const AllProducts = () => {
         exit={{
           opacity: 1,
           transition: {
-            delay: 0.5,
+            delay: 0.4,
           },
         }}
       >
