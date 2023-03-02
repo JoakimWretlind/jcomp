@@ -55,8 +55,8 @@ const AllProducts = () => {
     <>
       <ProductsPageWrapper
         as={motion.div}
-        initial={{ opacity: 0, scale: 0.97 }}
-        animate={{ opacity: 1, scale: 1 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{
           duration: 0.35,
           ease: [0.5, 0.11, 0.45, 0.15],
