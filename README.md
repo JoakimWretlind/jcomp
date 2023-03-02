@@ -58,6 +58,10 @@ The advantage of using keyframes is that it is very easy on the computer.
 
 I added a scrollToTop hook for mobile users. Before this, if the user scrolled down and clicked a product, the detail-page would not start from the top, but a bit further down.
 
+### Issues
+
+There was some issues with the pagetranisions being a bit laggy on mobile devices. I tried to get around this with lazy loading and some other techniques, but I didn't get quite happy with the result. Finally I changed some parameters inside the Framer motion animations. It proves that scaling and some other properties require more work to run smoothly on mobile devices.
+
 ## Tools
 
 <img align="left" src="https://img.shields.io/badge/-React-white?style=for-the-badge&logo=React&logoColor=#61DAFB"/>
@@ -77,10 +81,10 @@ I added a scrollToTop hook for mobile users. Before this, if the user scrolled d
 
 [demo](https://jcomputers.netlify.app// "Joakim Computers")
 
-![Acme Movies](/public/resources/home_01.png "landing page")
+![Acme Movies](/public/resources/home_02.png "landing page")
 </br>
 </br>
-![Acme Movies](/public/resources/detail_01.png "landing page")
+![Acme Movies](/public/resources/detail_02.png "landing page")
 
 ## Run
 
