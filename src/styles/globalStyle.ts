@@ -7,7 +7,7 @@ export const searchTheme = {
   lightWhite: "hsl(240, 5%, 96%)",
   midWhite: "hsl(240, 5%, 91%)",
   gray: "hsl(0, 0%, 70%)",
-  lightGray: "hsl(0, 0%, 85%)",
+  lightGray: "hsl(0, 0%, 91%)",
   darkBlack: "hsl(0, 0%, 10%)",
   midBlack: "hsl(0, 0%, 15%)",
   red: "hsl(0, 88%, 37%)",
