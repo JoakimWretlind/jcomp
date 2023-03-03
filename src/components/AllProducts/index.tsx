@@ -4,12 +4,18 @@ import { Link } from "react-router-dom";
 import {
   ButtonWrapper,
   CardContainer,
-  FilterButton,
+  FilteredButton,
   H2,
   Overlay,
   ProductsPageWrapper,
 } from "./style";
-import { ComponentType, lazy, LazyExoticComponent, useState } from "react";
+import {
+  ComponentType,
+  lazy,
+  LazyExoticComponent,
+  SetStateAction,
+  useState,
+} from "react";
 import buttonData from "./buttonData.json";
 import { SectionWrapper } from "../ProductCard/style";
 import { motion } from "framer-motion";
@@ -31,6 +37,7 @@ const AllProducts = () => {
   const { products } = useProductContext();
   const [search, setSearch] = useState<string>("");
   const [isDetails, setIsDetails] = useState<boolean>(false);
+  const [isFiltered, setIsFiltered] = useState<SetStateAction<number>>(0);
 
   const filteredProducts = products?.filter((item) => {
     if (search.toLowerCase() === "") {
@@ -49,6 +56,11 @@ const AllProducts = () => {
       console.log("yeps");
       return <HorizontalStaggerTransition />;
     }
+  };
+
+  const handleClick = (path: string, index: number) => {
+    setSearch(`${path}`);
+    setIsFiltered(index);
   };
 
   return (
@@ -70,16 +82,16 @@ const AllProducts = () => {
       >
         <Searchbar setSearch={setSearch} />
         <ButtonWrapper>
-          {buttonData.map((btn: ButtonProps, index: number) => {
+          {buttonData.map((btn: ButtonProps, index) => {
             const { id, title, path } = btn;
             return (
-              <FilterButton
+              <FilteredButton
                 key={id}
-                onClick={() => setSearch(`${path}`)}
-                aria-label={`filter ${path}`}
+                onClick={() => handleClick(path, index)}
+                className={`${index === isFiltered && "filtered"}`}
               >
                 {title}
-              </FilterButton>
+              </FilteredButton>
             );
           })}
         </ButtonWrapper>

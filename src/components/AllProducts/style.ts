@@ -4,6 +4,10 @@ type DetailProps = {
   isDetails: boolean;
 };
 
+type ActiveProps = {
+  isActive: any;
+};
+
 export const ProductsPageWrapper = styled.div`
   height: min-content;
   display: flex;
@@ -42,7 +46,7 @@ export const ButtonWrapper = styled.div`
   }
 `;
 
-export const FilterButton = styled.button`
+export const FilteredButton = styled.button`
   padding: 0.6rem 0.8rem;
   width: 80%;
   max-width: 18rem;
@@ -52,18 +56,22 @@ export const FilterButton = styled.button`
   margin: 0.2rem;
   background-color: ${(props) => props.theme.brightWhite};
   color: ${(props) => props.theme.midBlack};
-  box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
   font-family: "montserrat", sans-serif;
+  box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
   transition: 0.25s ease;
   @media (min-width: ${(props) => props.theme.smallScreen}) {
     margin: 0.1rem;
     min-width: 11rem;
   }
   &:hover {
-    transform: translateY(0.1rem);
     cursor: pointer;
-    color: ${(props) => props.theme.brightWhite};
+    transform: translateY(0.1rem);
     background-color: ${(props) => props.theme.lightGray};
+  }
+  &.filtered {
+    font-weight: 400;
+    background-color: ${(props) => props.theme.midBlack};
+    color: ${(props) => props.theme.midWhite};
   }
 `;
 
