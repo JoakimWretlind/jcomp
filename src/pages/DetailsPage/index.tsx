@@ -13,13 +13,10 @@ import {
 import { motion } from "framer-motion";
 import { useTiming } from "../../components/hooks/useTiming";
 import { IoReturnUpBackOutline } from "react-icons/io5";
-import { Wrapper } from "../../styles/commonStyles";
-import { FadeInTransition } from "../../components/animations/pageTransitions/fadeInTransition";
 
 const DetailsPage = () => {
   let { productID } = useParams();
   const { products } = useProductContext();
-  const timing = useTiming();
 
   try {
     const product: IProducts = products?.find(
