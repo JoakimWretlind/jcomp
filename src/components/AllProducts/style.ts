@@ -40,30 +40,30 @@ export const ButtonWrapper = styled.div`
     justify-content: space-around;
     align-items: center;
   }
-  button {
-    padding: 0.8rem;
-    width: 80%;
-    max-width: 18rem;
-    outline: none;
-    border: none;
-    border-radius: 0.3rem;
-    margin: 0.2rem;
-    background-color: ${(props) => props.theme.blue};
+`;
+
+export const FilterButton = styled.button`
+  padding: 0.6rem 0.8rem;
+  width: 80%;
+  max-width: 18rem;
+  outline: none;
+  border: none;
+  border-radius: 0.3rem;
+  margin: 0.2rem;
+  background-color: ${(props) => props.theme.brightWhite};
+  color: ${(props) => props.theme.midBlack};
+  box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
+  font-family: "montserrat", sans-serif;
+  transition: 0.25s ease;
+  @media (min-width: ${(props) => props.theme.smallScreen}) {
+    margin: 0.1rem;
+    min-width: 11rem;
+  }
+  &:hover {
+    transform: translateY(0.1rem);
+    cursor: pointer;
     color: ${(props) => props.theme.brightWhite};
-    box-shadow: 0 0.2rem 0.4rem rgba(13, 65, 73, 0.3);
-    transition: 0.25s ease;
-    @media (min-width: ${(props) => props.theme.smallScreen}) {
-      margin: 0.1rem;
-      min-width: 11rem;
-    }
-    &:hover {
-      transform: translateY(0.1rem);
-      cursor: pointer;
-      background-color: ${(props) => props.theme.lightBlue};
-      color: ${(props) => props.theme.darkBlack};
-      box-shadow: 0 -0.1rem 0.2rem rgba(26, 153, 173, 0.3),
-        inset 0 -0.1rem 0.2rem rgba(255, 255, 255, 1);
-    }
+    background-color: ${(props) => props.theme.lightGray};
   }
 `;
 
@@ -72,7 +72,6 @@ export const Overlay = styled.div<DetailProps>`
   top: 0;
   left: 0;
   height: 100vh;
-  // width (or height) has to be dynamic not to cover the open page
   width: ${({ isDetails }) => (isDetails ? "100vw" : "0vw")};
 `;
 

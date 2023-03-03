@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import {
   ButtonWrapper,
   CardContainer,
+  FilterButton,
   H2,
   Overlay,
   ProductsPageWrapper,
@@ -44,7 +45,6 @@ const AllProducts = () => {
   });
 
   const handleActive = () => {
-    console.log("hmmm");
     if (isDetails == true) {
       console.log("yeps");
       return <HorizontalStaggerTransition />;
@@ -70,16 +70,16 @@ const AllProducts = () => {
       >
         <Searchbar setSearch={setSearch} />
         <ButtonWrapper>
-          {buttonData.map((btn: ButtonProps) => {
+          {buttonData.map((btn: ButtonProps, index: number) => {
             const { id, title, path } = btn;
             return (
-              <button
+              <FilterButton
                 key={id}
                 onClick={() => setSearch(`${path}`)}
                 aria-label={`filter ${path}`}
               >
                 {title}
-              </button>
+              </FilterButton>
             );
           })}
         </ButtonWrapper>

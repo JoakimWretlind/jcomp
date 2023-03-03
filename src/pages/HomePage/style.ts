@@ -13,13 +13,16 @@ export const HomePageContainer = styled.div`
 export const H1 = styled.h1`
   grid-row: 1;
   height: 100%;
-  font-size: clamp(2rem, 8vw, 4rem);
+  font-size: clamp(2rem, 6vw, 3rem);
   text-transform: capitalize;
-  font-weight: 300;
-  letter-spacing: 0.2rem;
-  font-family: "Roboto", sans-serif;
+  //font-weight: 300;
+  font-weight: 400;
+  //letter-spacing: 0.2rem;
+  letter-spacing: clamp(0.2rem, 2vw, 1rem);
+  //font-family: "Roboto", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 3rem;
+  color: ${(props) => props.theme.midBlack};
 `;
