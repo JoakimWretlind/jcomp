@@ -104,7 +104,7 @@ const AllProducts = () => {
                 return (
                   <Link
                     key={product.id}
-                    to={`/products/${product.id}`}
+                    to={`/${product.id}`}
                     onClick={() => setIsDetails(!isDetails)}
                   >
                     <motion.div

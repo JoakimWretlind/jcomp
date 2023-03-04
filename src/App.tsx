@@ -27,7 +27,7 @@ function App() {
           <AnimatePresence mode="wait" initial={false}>
             <Routes location={location} key={location.pathname}>
               <Route path="/" element={<HomePage />} />
-              <Route path="/products/:productID" element={<DetailsPage />} />
+              <Route path="/:productID" element={<DetailsPage />} />
               <Route path="*" element={<ErrorsPage />} />
             </Routes>
           </AnimatePresence>
