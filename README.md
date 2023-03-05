@@ -58,7 +58,15 @@ The advantage of using keyframes is that it is very easy on the computer.
 
 I added a scrollToTop hook for mobile users. Before this, if the user scrolled down and clicked a product, the detail-page would not start from the top, but a bit further down.
 
-### Issues
+## Issues
+
+### Routing
+
+This page is deployed on Netlify, and this is why the node router that is running in production will not work on the built page (the folders used in production will not be found). This is shown when you re-fresh the page from a route (that is not the base url), you will get a 404 from Netlify (it will also be unable to route to the error page created in the application).<br/>
+To get around this I went with HashRouter from react-router-dom (built from the history API). The downside of this is that a hashtag (#) will be added in the url. However, the browser will interpret this hashtag as an id, which the hisory api is capable of handling, and serve the deisred page.<br/>
+For a real life application, where you use another server to host your page, this problem will not be the same.
+
+### Animating
 
 There was some issues with the pagetranisions being a bit laggy on mobile devices. I tried to get around this with lazy loading and some other techniques, but I didn't get quite happy with the result. Finally I changed some parameters inside the Framer motion animations. It proves that scaling and some other properties require more work to run smoothly on mobile devices.
 
