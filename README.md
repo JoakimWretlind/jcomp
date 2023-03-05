@@ -62,10 +62,10 @@ I added a scrollToTop hook for mobile users. Before this, if the user scrolled d
 
 ### Routing
 
-This page is deployed on Netlify, and this is why the node router that is running in production will not work on the built page (the folders used in production will not be found). This is shown when you re-fresh the page from a route (that is not the base url), you will get a 404 from Netlify (it will also be unable to route to the error page created in the application).<br/>
-To get around this I went with HashRouter from react-router-dom (built from the history API). The downside of this is that a hashtag (#) will be added in the url. However, the browser will interpret this hashtag as an id, which the hisory api is capable of handling, and serve the deisred page.<br/>
-For a real life application, where you use another server to host your page, this problem will not be the same.<br/>
-From reactrouter.com "<HashRouter> is for use in web browsers when the URL should not (or cannot) be sent to the server for some reason. This may happen in some shared hosting scenarios where you do not have full control over the server."
+This page is deployed on Netlify, and this is why the node router that is running in production will not work on the built page (the folders used in production will not be found). This is shown when you re-fresh the page from a route (that is not the base url), you will get a 404 from Netlify (it will also be unable to route to the error page created in the application).<br/><br/>
+To get around this I went with HashRouter from react-router-dom (built from the history API). The downside of this is that a hashtag (#) will be added in the url. However, the browser will interpret this hashtag as an id, which the hisory api is capable of handling, and serve the deisred page.<br/><br/>
+For a real life application, where you use another server to host your page, this problem will not be the same.<br/><br/>
+From reactrouter.com "HashRouter is for use in web browsers when the URL should not (or cannot) be sent to the server for some reason. This may happen in some shared hosting scenarios where you do not have full control over the server."
 
 ### Animating
 
