@@ -11,7 +11,6 @@ import {
   TextPane,
 } from "./style";
 import { motion } from "framer-motion";
-import { useTiming } from "../../components/hooks/useTiming";
 import { IoReturnUpBackOutline } from "react-icons/io5";
 
 const DetailsPage = () => {
