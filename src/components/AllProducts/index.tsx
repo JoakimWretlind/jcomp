@@ -1,43 +1,18 @@
 import IProducts from "../interfaces/IProducts";
 import { useProductContext } from "../context/ProductsProvider";
 import { Link } from "react-router-dom";
-import {
-  ButtonWrapper,
-  CardContainer,
-  FilteredButton,
-  H2,
-  Overlay,
-  ProductsPageWrapper,
-} from "./style";
-import {
-  ComponentType,
-  lazy,
-  LazyExoticComponent,
-  SetStateAction,
-  useState,
-} from "react";
-import buttonData from "./buttonData.json";
+import { CardContainer, H2, Overlay, ProductsPageWrapper } from "./style";
+import { useState } from "react";
 import { SectionWrapper } from "../ProductCard/style";
 import { motion } from "framer-motion";
 import { HorizontalStaggerTransition } from "../animations/pageTransitions/staggerHorizontal";
-export const Searchbar: LazyExoticComponent<ComponentType<any>> = lazy(
-  () => import("../Searchbar")
-);
-export const ProductCard: LazyExoticComponent<ComponentType<any>> = lazy(
-  () => import("../ProductCard")
-);
-
-type ButtonProps = {
-  id: number;
-  title: string;
-  path: string;
-};
+import Searchbar from "../Searchbar";
+import ProductCard from "../ProductCard";
 
 const AllProducts = () => {
   const { products } = useProductContext();
   const [search, setSearch] = useState<string>("");
   const [isDetails, setIsDetails] = useState<boolean>(false);
-  const [isFiltered, setIsFiltered] = useState<SetStateAction<number>>(0);
 
   const filteredProducts = products?.filter((item) => {
     if (search.toLowerCase() === "") {
@@ -53,14 +28,8 @@ const AllProducts = () => {
 
   const handleActive = () => {
     if (isDetails == true) {
-      console.log("yeps");
       return <HorizontalStaggerTransition />;
     }
-  };
-
-  const handleClick = (path: string, index: number) => {
-    setSearch(`${path}`);
-    setIsFiltered(index);
   };
 
   return (
@@ -81,20 +50,6 @@ const AllProducts = () => {
         }}
       >
         <Searchbar setSearch={setSearch} />
-        <ButtonWrapper>
-          {buttonData.map((btn: ButtonProps, index) => {
-            const { id, title, path } = btn;
-            return (
-              <FilteredButton
-                key={id}
-                onClick={() => handleClick(path, index)}
-                className={`${index === isFiltered && "filtered"}`}
-              >
-                {title}
-              </FilteredButton>
-            );
-          })}
-        </ButtonWrapper>
         <SectionWrapper>
           <CardContainer>
             {!filteredProducts?.length ? (

@@ -4,10 +4,6 @@ type DetailProps = {
   isDetails: boolean;
 };
 
-type ActiveProps = {
-  isActive: any;
-};
-
 export const ProductsPageWrapper = styled.div`
   height: min-content;
   display: flex;
