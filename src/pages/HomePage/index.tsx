@@ -1,9 +1,6 @@
-import { lazy, LazyExoticComponent, ComponentType } from "react";
+import AllProducts from "../../components/AllProducts";
 import { Footer } from "../../components/Footer";
 import { H1, HomePageContainer } from "./style";
-const AllProducts: LazyExoticComponent<ComponentType<any>> = lazy(
-  () => import("../../components/AllProducts")
-);
 
 const HomePage = () => {
   return (

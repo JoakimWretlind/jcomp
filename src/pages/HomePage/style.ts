@@ -15,7 +15,6 @@ export const H1 = styled.h1`
   height: 100%;
   font-size: clamp(2rem, 6vw, 3rem);
   text-transform: capitalize;
-  //font-weight: 300;
   font-weight: 400;
   //letter-spacing: 0.2rem;
   letter-spacing: clamp(0.2rem, 2vw, 1rem);
