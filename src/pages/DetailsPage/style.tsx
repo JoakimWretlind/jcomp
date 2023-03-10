@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { IoReturnUpBackOutline } from "react-icons/io5";
 
 export const DetailsWrapper = styled.div`
   height: 100%;
@@ -130,17 +129,19 @@ export const InfoContainer = styled.div`
   }
 `;
 
-export const BackIcon = styled(Link)`
-  width: 4rem;
-  height: 4rem;
-  border-radius: 100%;
+export const BackButton = styled(Link)`
+  width: 6rem;
+  height: 3rem;
+  background-color: ${(props) => props.theme.blue};
+  color: ${(props) => props.theme.midWhite};
+  border-radius: 0.3rem;
   display: flex;
+  justify-content: center;
   align-items: center;
-  padding: 0.5rem;
-  margin: 1rem 0 2rem -0.5rem;
-  font-size: clamp(2.2rem, 6.4vw, 3.2rem);
-  color: ${(props) => props.theme.blue};
+  font-size: 3rem;
+  margin-bottom: 1rem;
   transition: 0.25s ease;
+  box-shadow: ${(props) => props.theme.buttonShadow};
   &:hover {
     transform: translateY(0.1rem);
     cursor: pointer;

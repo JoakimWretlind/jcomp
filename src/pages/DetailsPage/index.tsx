@@ -3,7 +3,7 @@ import { useProductContext } from "../../components/context/ProductsProvider";
 import IProducts, { IImages } from "../../components/interfaces/IProducts";
 import {
   AllImagesContainer,
-  BackIcon,
+  BackButton,
   DetailsContainer,
   DetailsWrapper,
   ImgContainer,
@@ -11,7 +11,7 @@ import {
   TextPane,
 } from "./style";
 import { motion } from "framer-motion";
-import { IoReturnUpBackOutline } from "react-icons/io5";
+import { CgArrowLongLeft } from "react-icons/cg";
 
 const DetailsPage = () => {
   let { productID } = useParams();
@@ -56,9 +56,9 @@ const DetailsPage = () => {
           </AllImagesContainer>
           <TextPane>
             <InfoContainer>
-              <BackIcon to="/">
-                <IoReturnUpBackOutline />
-              </BackIcon>
+              <BackButton to="/">
+                <CgArrowLongLeft />
+              </BackButton>
               <h4>{category}</h4>
               <p>{infoDetail}</p>
               {size ? <p>Storlek: {size}"</p> : null}
