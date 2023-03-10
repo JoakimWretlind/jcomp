@@ -46,6 +46,17 @@ const Searchbar = ({ setSearch }: SearchProps) => {
     e.key == "Enter" ? handleSearch() : null;
   };
 
+  // Handle input text when user clicks on the dropdown menu
+  const handleHistory = (search: string) => {
+    setSearch(`${search}`.toLowerCase());
+    setCategory(`${search}`.toLowerCase());
+  };
+
+  // Handle when user clears input field
+  const onChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setCategory(event.target.value);
+  };
+
   return (
     <>
       <SearchContainer>
@@ -58,7 +69,8 @@ const Searchbar = ({ setSearch }: SearchProps) => {
               list="searches"
               ref={inputRef}
               onKeyDown={onEnter}
-              defaultValue={category}
+              value={category}
+              onChange={onChangeHandler}
             />
           </label>
           <Dropdown>
@@ -66,7 +78,7 @@ const Searchbar = ({ setSearch }: SearchProps) => {
               return (
                 <li
                   key={idx}
-                  onClick={() => setSearch(`${search}`.toLowerCase())}
+                  onClick={() => handleHistory(search)}
                   aria-label={`filter ${search}`}
                 >
                   {search}
