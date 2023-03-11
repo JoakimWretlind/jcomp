@@ -8,6 +8,7 @@ import {
 import { Button, Dropdown, Form, SearchContainer } from "./style";
 import { BiSearch } from "react-icons/bi";
 import { FilterButtons } from "../FilterButtons";
+import { useSearchParams } from "react-router-dom";
 
 // A variable to set the number of unique searchvalues => separate variable = easy to change.
 const searches: number = 4;
@@ -19,6 +20,8 @@ type SearchProps = {
 const Searchbar = ({ setSearch }: SearchProps) => {
   const [category, setCategory] = useState<string>("");
   const inputRef = useRef<HTMLInputElement>(null);
+  const [searchParams, setSearchParams] = useSearchParams();
+
   let searchArray = JSON.parse(localStorage.getItem("searches")!) || [];
 
   // Handle the array of previous searches
@@ -32,6 +35,7 @@ const Searchbar = ({ setSearch }: SearchProps) => {
   // Handle search when search-button is used
   const handleSearch = () => {
     setSearch(String(inputRef.current?.value.toLowerCase()));
+    setSearchParams(String(inputRef.current?.value.toLowerCase()));
 
     if (searchArray.length >= searches) {
       searchArray.shift();
@@ -50,6 +54,7 @@ const Searchbar = ({ setSearch }: SearchProps) => {
   const handleHistory = (search: string) => {
     setSearch(`${search}`.toLowerCase());
     setCategory(`${search}`.toLowerCase());
+    setSearchParams(`${search}`.toLowerCase());
   };
 
   // Handle when user clears input field
