@@ -10,12 +10,16 @@ import { Logo } from "./components/Logo";
 function App() {
   const location = useLocation();
 
+  window.addEventListener("load", () => {
+    sessionStorage.setItem("loaded", "true");
+  });
+
   return (
     <>
       <GlobalStyle />
       <ThemeProvider theme={searchTheme}>
-        <Preloader />
-        <Logo />
+        {sessionStorage.getItem("loaded") ? <Logo /> : <Preloader />}
+
         <ProductsProvider>
           <AnimatePresence mode="wait" initial={false}>
             <Routes location={location} key={location.pathname}>
