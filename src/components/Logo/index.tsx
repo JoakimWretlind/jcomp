@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import { H2, TextBox } from "./style";
+import { H2, LogoContainer } from "./style";
 
 export const Logo = () => {
   return (
-    <Link to="/">
-      <TextBox>
+    <LogoContainer>
+      <Link to="/">
         <H2>j computers</H2>
-      </TextBox>
-    </Link>
+      </Link>
+    </LogoContainer>
   );
 };
