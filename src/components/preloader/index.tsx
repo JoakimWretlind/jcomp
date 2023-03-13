@@ -1,10 +1,11 @@
-import { MainContainer, SkewContainer, SkewContainer2 } from "./style";
+import { Backgrounds } from "./Backgrounds";
+import { Logo } from "./Logo";
 
 export const Preloader = () => {
   return (
-    <MainContainer>
-      <SkewContainer />
-      <SkewContainer2 />
-    </MainContainer>
+    <>
+      <Logo />
+      <Backgrounds />
+    </>
   );
 };
