@@ -57,6 +57,9 @@ The advantage of using keyframes is that it is very easy on the computer.
 ### Extra
 
 I added a scrollToTop hook for mobile users. Before this, if the user scrolled down and clicked a product, the detail-page would not start from the top, but a bit further down.
+</br>
+</br>
+For the preloader I added sessionStorage. This way the preloader will only run when the session is started, and not everytime a page is refreshed.
 
 ## Issues
 
