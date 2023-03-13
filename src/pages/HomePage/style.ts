@@ -6,7 +6,7 @@ export const HomePageContainer = styled.div`
   width: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-rows: 10vh minmax(76vh, 1fr) 14vh;
+  grid-template-rows: minmax(10rem, 10vh) minmax(76vh, 1fr) 14vh;
   background-color: ${(props) => props.theme.midWhite};
 `;
 
