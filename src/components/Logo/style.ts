@@ -24,7 +24,7 @@ export const H2 = styled.h2`
   color: ${(props) => props.theme.blue};
   border: 0.3rem solid ${(props) => props.theme.blue};
   visibility: hidden;
-  @media (min-width: ${(props) => props.theme.smallScreen}) {
+  @media (min-width: 821px) and (min-height: 620px) {
     visibility: visible;
   }
 `;
