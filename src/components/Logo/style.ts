@@ -23,4 +23,8 @@ export const H2 = styled.h2`
   transform: scale(0.8);
   color: ${(props) => props.theme.blue};
   border: 0.3rem solid ${(props) => props.theme.blue};
+  visibility: hidden;
+  @media (min-width: ${(props) => props.theme.smallScreen}) {
+    visibility: visible;
+  }
 `;
