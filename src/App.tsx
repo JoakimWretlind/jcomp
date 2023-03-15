@@ -19,7 +19,6 @@ function App() {
       <GlobalStyle />
       <ThemeProvider theme={searchTheme}>
         {sessionStorage.getItem("loaded") ? <Logo /> : <Preloader />}
-
         <ProductsProvider>
           <AnimatePresence mode="wait" initial={false}>
             <Routes location={location} key={location.pathname}>
