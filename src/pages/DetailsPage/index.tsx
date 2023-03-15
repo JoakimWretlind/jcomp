@@ -1,20 +1,21 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useProductContext } from "../../components/context/ProductsProvider";
 import IProducts, { IImages } from "../../components/interfaces/IProducts";
-import {
-  AllImagesContainer,
-  DetailsContainer,
-  DetailsWrapper,
-  HeaderContainer,
-  Icon,
-  ImgContainer,
-  InfoContainer,
-  TextPane,
-} from "./style";
+
 import { motion } from "framer-motion";
 import { HiOutlineArrowLongLeft } from "react-icons/hi2";
+import {
+  ContentWrapper,
+  HeaderWrapper,
+  Icon,
+  ImgHolder,
+  ImgWrapper,
+  PageWrapper,
+  TextPane,
+  TextWrapper,
+} from "./style";
 
-const DetailsPage = () => {
+const DetailsPage02 = () => {
   let { productID } = useParams();
   const { products } = useProductContext();
 
@@ -36,7 +37,7 @@ const DetailsPage = () => {
     } = product;
 
     return (
-      <DetailsWrapper
+      <PageWrapper
         key={id}
         as={motion.div}
         initial={{ opacity: 0 }}
@@ -44,40 +45,39 @@ const DetailsPage = () => {
         transition={{ duration: 0.4, ease: [0.5, 0.11, 0.45, 0.15] }}
         exit={{ opacity: 0 }}
       >
-        <HeaderContainer>
-          <Icon>
-            <HiOutlineArrowLongLeft />
-          </Icon>
+        <HeaderWrapper>
+          <Link to="/">
+            <Icon>
+              <HiOutlineArrowLongLeft />
+            </Icon>
+          </Link>
           <h2>{`${brand} ${model}`}</h2>
-        </HeaderContainer>
-        <DetailsContainer>
-          <AllImagesContainer>
+        </HeaderWrapper>
+        <ContentWrapper>
+          <ImgWrapper>
             {images.map((image: IImages) => {
               return (
-                <ImgContainer key={image.id}>
+                <ImgHolder key={image.id}>
                   <img src={image.image} alt={`${brand} ${model}`} />
-                </ImgContainer>
+                </ImgHolder>
               );
             })}
-          </AllImagesContainer>
+          </ImgWrapper>
           <TextPane>
-            <InfoContainer>
-              {/* <BackButton to="/">
-                <CgArrowLongLeft />
-              </BackButton> */}
+            <TextWrapper>
               <h4>{category}</h4>
               <p>{infoDetail}</p>
               {size ? <p>Storlek: {size}"</p> : null}
               {color ? <p>Färg: {color}</p> : null}
               <p className="price">Pris: {price}$</p>
-            </InfoContainer>
+            </TextWrapper>
           </TextPane>
-        </DetailsContainer>
-      </DetailsWrapper>
+        </ContentWrapper>
+      </PageWrapper>
     );
   } catch (err) {
     return <h1>oops</h1>;
   }
 };
 
-export default DetailsPage;
+export default DetailsPage02;

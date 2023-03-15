@@ -1,65 +1,53 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
-export const DetailsWrapper = styled.div`
+export const PageWrapper = styled.div`
   height: 100%;
   min-height: 100vh;
   width: 100%;
   padding: 0 3rem;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: ${(props) => props.theme.midBlack};
 `;
 
-export const HeaderContainer = styled.div`
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+export const HeaderWrapper = styled.div`
+  margin: 3rem auto;
   display: flex;
-  align-items: center;
-  @media (min-width: ${(props) => props.theme.midScreen}) {
-    margin-top: 0;
-  }
   h2 {
-    margin-left: 2rem;
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 300;
     text-transform: capitalize;
     letter-spacing: 0.2rem;
     color: ${(props) => props.theme.brightWhite};
   }
+  @media (min-width: ${(props) => props.theme.midScreen}) {
+    margin: 0 auto 3rem;
+  }
 `;
 
 export const Icon = styled.div`
   font-size: 3rem;
-  margin-top: 0.8rem;
+  margin: 0.3rem 1rem 0 0;
   color: ${(props) => props.theme.brightWhite};
 `;
 
-export const DetailsContainer = styled.div`
-  height: 100%;
+export const ContentWrapper = styled.div`
   width: 100%;
   max-width: 120rem;
   display: grid;
   grid-template-rows: repeat(2, max-content);
   padding-bottom: 7rem;
-  border: 0.1rem solid red;
   @media (min-width: ${(props) => props.theme.midScreen}) {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-  @media (min-width: ${(props) => props.theme.largeScreen}) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    align-items: stretch;
   }
 `;
 
-export const AllImagesContainer = styled.div`
+export const ImgWrapper = styled.div`
   grid-row: 2;
   height: 100%;
   width: 100%;
@@ -69,32 +57,36 @@ export const AllImagesContainer = styled.div`
   align-items: center;
   max-width: 71rem;
   margin-top: 1rem;
-  @media (min-width: ${(props) => props.theme.largeScreen}) {
-    margin-top: 0;
+  @media (min-width: ${(props) => props.theme.midScreen}) {
+    width: 56%;
   }
 `;
 
-export const ImgContainer = styled.div`
-  position: relative;
-  width: 17rem;
+export const ImgHolder = styled.div`
+  width: 100%;
   margin: 1rem;
   padding: 1.4rem;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: ${(props) => props.theme.midWhite};
-  border-radius: 1rem;
+  border-radius: 0.4rem;
   box-shadow: 0 0.2rem 0.6rem rgb(0, 0, 0);
   transition: 0.3s ease;
+  @media (min-width: ${(props) => props.theme.xsScreen}) {
+    width: 44%;
+    height: 15rem;
+  }
   @media (min-width: ${(props) => props.theme.smallScreen}) {
     height: 17rem;
-    width: 21%;
+    width: 21.4%;
   }
   @media (min-width: ${(props) => props.theme.midScreen}) {
-    width: clamp(16rem, 25vw, 24rem);
+    width: clamp(15rem, 22vw, 25rem);
+    height: 19rem;
   }
   @media (min-width: ${(props) => props.theme.largeScreen}) {
-    width: clamp(23rem, 29vw, 30rem);
+    width: clamp(19rem, 22vw, 30rem);
     height: 23rem;
   }
   img {
@@ -111,16 +103,28 @@ export const ImgContainer = styled.div`
   }
 `;
 
-export const InfoContainer = styled.div`
-  grid-row: 1;
+export const TextPane = styled.div`
+  margin: 0 auto;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  @media (min-width: ${(props) => props.theme.midScreen}) {
+    width: 45%;
+    margin-top: 1rem;
+  }
+`;
+
+export const TextWrapper = styled.div`
+  grid-row: 1;
+  flex: 1;
   min-width: 26rem;
-  margin-top: 2rem;
   padding: 2rem;
   border-radius: 0.4rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   background-color: ${(props) => props.theme.midWhite};
   box-shadow: inset 0 0.1rem 0.2rem rgba(0, 0, 0, 1),
     inset 0 -0.2rem 0.4rem rgba(255, 255, 255, 1);
@@ -139,49 +143,5 @@ export const InfoContainer = styled.div`
       font-weight: 700;
       font-size: 1.5rem;
     }
-  }
-`;
-
-export const TextPane = styled.div`
-  height: 100%;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;
-  @media (min-width: ${(props) => props.theme.midScreen}) {
-    margin: 0;
-    width: 40%;
-    max-width: 40rem;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-`;
-
-export const Links = styled(Link)`
-  margin-top: 2rem;
-  border-radius: 0.4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: ${(props) => props.theme.blue};
-  color: ${(props) => props.theme.brightWhite};
-  font-size: 1.4rem;
-  font-weight: 700;
-  letter-spacing: 0.1rem;
-  transition: 0.3s ease;
-  p {
-    padding-left: 0.5rem;
-  }
-  &:hover {
-    transform: translateY(0.1rem);
-    cursor: pointer;
-    background-color: ${(props) => props.theme.lightBlue};
-    color: ${(props) => props.theme.darkBlack};
-    box-shadow: 0 -0.1rem 0.2rem rgba(26, 153, 173, 0.3),
-      inset 0 -0.1rem 0.2rem rgba(255, 255, 255, 1);
   }
 `;
