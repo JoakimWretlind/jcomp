@@ -64,6 +64,7 @@ export const ImgWrapper = styled.div`
 
 export const ImgHolder = styled.div`
   width: 100%;
+  height: 15rem;
   margin: 1rem;
   padding: 1.4rem;
   display: flex;
@@ -75,7 +76,6 @@ export const ImgHolder = styled.div`
   transition: 0.3s ease;
   @media (min-width: ${(props) => props.theme.xsScreen}) {
     width: 44%;
-    height: 15rem;
   }
   @media (min-width: ${(props) => props.theme.smallScreen}) {
     height: 17rem;
