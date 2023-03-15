@@ -3,15 +3,16 @@ import { useProductContext } from "../../components/context/ProductsProvider";
 import IProducts, { IImages } from "../../components/interfaces/IProducts";
 import {
   AllImagesContainer,
-  BackButton,
   DetailsContainer,
   DetailsWrapper,
+  HeaderContainer,
+  Icon,
   ImgContainer,
   InfoContainer,
   TextPane,
 } from "./style";
 import { motion } from "framer-motion";
-import { CgArrowLongLeft } from "react-icons/cg";
+import { HiOutlineArrowLongLeft } from "react-icons/hi2";
 
 const DetailsPage = () => {
   let { productID } = useParams();
@@ -43,7 +44,12 @@ const DetailsPage = () => {
         transition={{ duration: 0.4, ease: [0.5, 0.11, 0.45, 0.15] }}
         exit={{ opacity: 0 }}
       >
-        <h2>{`${brand} ${model}`}</h2>
+        <HeaderContainer>
+          <Icon>
+            <HiOutlineArrowLongLeft />
+          </Icon>
+          <h2>{`${brand} ${model}`}</h2>
+        </HeaderContainer>
         <DetailsContainer>
           <AllImagesContainer>
             {images.map((image: IImages) => {
@@ -56,9 +62,9 @@ const DetailsPage = () => {
           </AllImagesContainer>
           <TextPane>
             <InfoContainer>
-              <BackButton to="/">
+              {/* <BackButton to="/">
                 <CgArrowLongLeft />
-              </BackButton>
+              </BackButton> */}
               <h4>{category}</h4>
               <p>{infoDetail}</p>
               {size ? <p>Storlek: {size}"</p> : null}

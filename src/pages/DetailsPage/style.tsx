@@ -11,18 +11,30 @@ export const DetailsWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+`;
+
+export const HeaderContainer = styled.div`
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  @media (min-width: ${(props) => props.theme.midScreen}) {
+    margin-top: 0;
+  }
   h2 {
-    margin-top: 3rem;
+    margin-left: 2rem;
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 300;
     text-transform: capitalize;
-    margin-bottom: 3rem;
     letter-spacing: 0.2rem;
     color: ${(props) => props.theme.brightWhite};
-    @media (min-width: ${(props) => props.theme.midScreen}) {
-      margin-top: 0;
-    }
   }
+`;
+
+export const Icon = styled.div`
+  font-size: 3rem;
+  margin-top: 0.8rem;
+  color: ${(props) => props.theme.brightWhite};
 `;
 
 export const DetailsContainer = styled.div`
@@ -32,6 +44,7 @@ export const DetailsContainer = styled.div`
   display: grid;
   grid-template-rows: repeat(2, max-content);
   padding-bottom: 7rem;
+  border: 0.1rem solid red;
   @media (min-width: ${(props) => props.theme.midScreen}) {
     display: flex;
     flex-direction: row;
@@ -126,29 +139,6 @@ export const InfoContainer = styled.div`
       font-weight: 700;
       font-size: 1.5rem;
     }
-  }
-`;
-
-export const BackButton = styled(Link)`
-  width: 6rem;
-  height: 3rem;
-  background-color: ${(props) => props.theme.blue};
-  color: ${(props) => props.theme.midWhite};
-  border-radius: 0.3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  transition: 0.25s ease;
-  box-shadow: ${(props) => props.theme.buttonShadow};
-  &:hover {
-    transform: translateY(0.1rem);
-    cursor: pointer;
-    background-color: ${(props) => props.theme.lightBlue};
-    color: ${(props) => props.theme.darkBlack};
-    box-shadow: 0 -0.1rem 0.2rem rgba(26, 153, 173, 0.3),
-      inset 0 -0.1rem 0.2rem rgba(255, 255, 255, 1);
   }
 `;
 
