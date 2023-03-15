@@ -131,7 +131,7 @@ export const TextWrapper = styled.div`
   h4 {
     font-size: 2.4rem;
     letter-spacing: 0.2rem;
-    margin: 1rem 0 1rem 1rem;
+    margin: 1rem 0;
   }
   p {
     font-size: 1.3rem;
