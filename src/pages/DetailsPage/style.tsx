@@ -9,7 +9,7 @@ export const PageWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: ${(props) => props.theme.midBlack};
+  background-color: ${(props) => props.theme.midBlack};
 `;
 
 export const HeaderWrapper = styled.div`
