@@ -62,7 +62,16 @@ export const ImgWrapper = styled.div`
   }
 `;
 
+export const Img = styled.img`
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  transition: 0.7s ease;
+  filter: contrast(100%);
+`;
+
 export const ImgHolder = styled.div`
+  overflow: hidden;
   width: 100%;
   height: 15rem;
   margin: 1rem;
@@ -89,17 +98,19 @@ export const ImgHolder = styled.div`
     width: clamp(19rem, 22vw, 30rem);
     height: 23rem;
   }
-  img {
+  /* img {
     height: 100%;
     width: 100%;
     object-fit: contain;
     transition: 0.7s ease;
     filter: contrast(100%);
-  }
-  &:hover {
+  } */
+  &:hover ${Img} {
     transition: 0.7s ease;
-    transform: translateY(-0.1rem);
+    //transform: translateY(-0.1rem);
+    transform: scale(1.035);
     filter: contrast(120%);
+    cursor: pointer;
   }
 `;
 

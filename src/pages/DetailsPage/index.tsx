@@ -1,13 +1,13 @@
 import { Link, useParams } from "react-router-dom";
 import { useProductContext } from "../../components/context/ProductsProvider";
 import IProducts, { IImages } from "../../components/interfaces/IProducts";
-
 import { motion } from "framer-motion";
 import { HiOutlineArrowLongLeft } from "react-icons/hi2";
 import {
   ContentWrapper,
   HeaderWrapper,
   Icon,
+  Img,
   ImgHolder,
   ImgWrapper,
   PageWrapper,
@@ -55,11 +55,13 @@ const DetailsPage02 = () => {
         </HeaderWrapper>
         <ContentWrapper>
           <ImgWrapper>
-            {images.map((image: IImages) => {
+            {images.map((image: IImages, idx: number) => {
               return (
-                <ImgHolder key={image.id}>
-                  <img src={image.image} alt={`${brand} ${model}`} />
-                </ImgHolder>
+                <Link key={image.id} to={`/${product.id}/${idx}`}>
+                  <ImgHolder>
+                    <Img src={image.image} alt={`${brand} ${model}`} />
+                  </ImgHolder>
+                </Link>
               );
             })}
           </ImgWrapper>
