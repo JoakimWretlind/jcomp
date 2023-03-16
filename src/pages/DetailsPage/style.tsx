@@ -56,11 +56,18 @@ export const ImgWrapper = styled.div`
   height: 100%;
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   max-width: 71rem;
   margin-top: 1rem;
+  @media (min-width: ${(props) => props.theme.smallScreen}) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
   @media (min-width: ${(props) => props.theme.midScreen}) {
     width: 56%;
   }
@@ -76,7 +83,7 @@ export const Img = styled.img`
 
 export const ImgHolder = styled.div`
   overflow: hidden;
-  width: 100%;
+  width: 80vw;
   height: 15rem;
   margin: 1rem;
   padding: 1.4rem;
@@ -87,12 +94,9 @@ export const ImgHolder = styled.div`
   border-radius: 0.4rem;
   box-shadow: 0 0.2rem 0.6rem rgb(0, 0, 0);
   transition: 0.3s ease;
-  @media (min-width: ${(props) => props.theme.xsScreen}) {
-    width: 44%;
-  }
   @media (min-width: ${(props) => props.theme.smallScreen}) {
     height: 17rem;
-    width: 21.4%;
+    width: 19.2vw;
   }
   @media (min-width: ${(props) => props.theme.midScreen}) {
     width: clamp(15rem, 22vw, 25rem);
@@ -102,10 +106,17 @@ export const ImgHolder = styled.div`
     width: clamp(19rem, 22vw, 30rem);
     height: 23rem;
   }
+  /* img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    transition: 0.7s ease;
+    filter: contrast(100%);
+  } */
   &:hover ${Img} {
     transition: 0.7s ease;
     //transform: translateY(-0.1rem);
-    transform: scale(1.025);
+    transform: scale(1.035);
     filter: contrast(120%);
     cursor: pointer;
   }
