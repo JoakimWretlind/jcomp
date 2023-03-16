@@ -30,8 +30,11 @@ export const HeaderWrapper = styled.div`
 
 export const Icon = styled.div`
   font-size: 3rem;
-  margin: 0.3rem 1rem 0 0;
+  margin: 0rem 1rem 0 0;
   color: ${(props) => props.theme.brightWhite};
+  @media (min-width: ${(props) => props.theme.midScreen}) {
+    margin: 0.3rem 1rem 0 0;
+  }
 `;
 
 export const ContentWrapper = styled.div`
@@ -99,17 +102,10 @@ export const ImgHolder = styled.div`
     width: clamp(19rem, 22vw, 30rem);
     height: 23rem;
   }
-  /* img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-    transition: 0.7s ease;
-    filter: contrast(100%);
-  } */
   &:hover ${Img} {
     transition: 0.7s ease;
     //transform: translateY(-0.1rem);
-    transform: scale(1.035);
+    transform: scale(1.025);
     filter: contrast(120%);
     cursor: pointer;
   }
