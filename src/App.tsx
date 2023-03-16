@@ -6,6 +6,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { DetailsPage, ErrorsPage, HomePage } from "./pages";
 import { Preloader } from "./components/preloader";
 import { Logo } from "./components/Logo";
+import { Modal } from "./components/modal";
 
 function App() {
   const location = useLocation();
@@ -24,6 +25,7 @@ function App() {
             <Routes location={location} key={location.pathname}>
               <Route path="/" element={<HomePage />} />
               <Route path="/:productID" element={<DetailsPage />} />
+              <Route path="/:productID/:index" element={<Modal />} />
               <Route path="*" element={<ErrorsPage />} />
             </Routes>
           </AnimatePresence>
