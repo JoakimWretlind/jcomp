@@ -54,7 +54,7 @@ export const ImgContainer = styled.div<ModalProps>`
   box-shadow: 0.1rem 0.4rem 1.2rem rgba(0, 0, 0, 0.8);
   transition: 0.75s ease;
   padding: 1.4rem;
-  @media (min-width: ${(props) => props.theme.smallScreen}) {
+  @media (min-width: 440px) {
     animation: ${imageAnimation} 0.75s forwards;
   }
   &:hover {
