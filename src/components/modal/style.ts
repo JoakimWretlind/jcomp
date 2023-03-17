@@ -41,6 +41,7 @@ export const ModalWrapper = styled.div<ModalProps>`
 
 export const ImgContainer = styled.div<ModalProps>`
   overflow: hidden;
+  background: radial-gradient(#c9f6fd, #212f3e);
   height: 10rem;
   width: 0;
   display: flex;
@@ -50,9 +51,9 @@ export const ImgContainer = styled.div<ModalProps>`
   animation-timing-function: cubic-bezier(1, 0.37, 0.41, 0.85);
   opacity: ${({ isModal }) => (isModal ? "0" : "1")};
   border-radius: 1rem;
-  box-shadow: 0.1rem 0.4rem 1.2rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0.1rem 0.4rem 1.2rem rgba(0, 0, 0, 0.8);
   transition: 0.75s ease;
-  padding: 1rem;
+  padding: 1.4rem;
   @media (min-width: ${(props) => props.theme.smallScreen}) {
     animation: ${imageAnimation} 0.75s forwards;
   }
