@@ -10,7 +10,8 @@ export const PageWrapper = styled.div`
   justify-content: center;
   align-items: center;
   color: ${(props) => props.theme.midBlack};
-  background-color: ${(props) => props.theme.midBlack};
+  //background-color: ${(props) => props.theme.midBlack};
+  background: radial-gradient(#343434, #171717);
 `;
 
 export const HeaderWrapper = styled.div`
