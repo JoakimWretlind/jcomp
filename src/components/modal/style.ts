@@ -10,19 +10,13 @@ const enterOpacity = keyframes`
 `;
 
 const imageAnimation = keyframes`
-    0%{
-      //  transform: rotate(0);
-        height: 10rem;
-        width: 0rem;
-    }
-    75%{
-      //  transform: rotate(365deg);
-    }
-    100%{
-        height: 40rem;
-        width: 40rem;
-       // transform: rotate(360deg);
-    }
+    0%{ height: 40rem; width: 0rem }
+    100%{height: 40rem; width: 40rem}
+`;
+
+const imageAnimation_small = keyframes`
+    0%{ height: 23rem; width: 0rem }
+    100%{ height: 23rem; width: 23rem}
 `;
 
 export const ModalWrapper = styled.div<ModalProps>`
@@ -52,13 +46,16 @@ export const ImgContainer = styled.div<ModalProps>`
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: ${imageAnimation} 0.75s forwards;
+  animation: ${imageAnimation_small} 0.75s forwards;
   animation-timing-function: cubic-bezier(1, 0.37, 0.41, 0.85);
   opacity: ${({ isModal }) => (isModal ? "0" : "1")};
   border-radius: 1rem;
   box-shadow: 0.1rem 0.4rem 1.2rem rgba(0, 0, 0, 0.5);
   transition: 0.75s ease;
   padding: 1rem;
+  @media (min-width: ${(props) => props.theme.smallScreen}) {
+    animation: ${imageAnimation} 0.75s forwards;
+  }
   &:hover {
     transition: 0.3s ease;
     transform: translateY(0.05rem);

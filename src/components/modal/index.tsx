@@ -1,12 +1,17 @@
+import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import IProducts from "../../components/interfaces/IProducts";
 import { useProductContext } from "../context/ProductsProvider";
-import { ModalWrapper } from "./style";
+import { Img, ImgContainer, ModalWrapper } from "./style";
 
 export const Modal = () => {
   let { productID } = useParams();
   const idxParams = useParams();
   const { products } = useProductContext();
+  const [isModal, setIsModal] = useState<boolean>(false);
+
+  // convert the path string to a number
+  let itemIndex = Number(idxParams.index);
 
   const navigate = useNavigate();
 
@@ -14,17 +19,18 @@ export const Modal = () => {
     (product) => product.id === productID
   )!;
 
-  // Navigate back to details page
-  const goBack = () => {
-    navigate(-1);
+  const delayLink = (e: any) => {
+    e.preventDefault();
+    setIsModal(!isModal);
+    setTimeout(() => navigate(-1), 500);
   };
 
-  // convert the path string to a number
-  let itemIndex = Number(idxParams.index);
-
   return (
-    <ModalWrapper onClick={goBack}>
-      <img src={product.images[itemIndex].image} />
+    <ModalWrapper isModal={isModal} onClick={(e) => delayLink(e)}>
+      <ImgContainer isModal={isModal}>
+        <Img src={product.images[itemIndex].image} />
+      </ImgContainer>
+      <p>click anywhere to get back</p>
     </ModalWrapper>
   );
 };
