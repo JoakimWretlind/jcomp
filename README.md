@@ -60,19 +60,23 @@ I added a scrollToTop hook for mobile users. Before this, if the user scrolled d
 </br>
 </br>
 For the preloader I added sessionStorage. This way the preloader will only run when the session is started, and not everytime a page is refreshed.
+</br>
+</br>
+I also decided to add a modal for the user to see a bigger picture of an item.
 
 ## Issues
 
 ### Routing
 
-This page is deployed on Netlify, and this is why the node router that is running in production will not work on the built page (the folders used in production will not be found). This is shown when you re-fresh the page from a route (that is not the base url), you will get a 404 from Netlify (it will also be unable to route to the error page created in the application).<br/><br/>
-To get around this I went with HashRouter from react-router-dom (built from the history API). The downside of this is that a hashtag (#) will be added in the url. However, the browser will interpret this hashtag as an id, which the hisory api is capable of handling, and serve the deisred page.<br/><br/>
-For a real life application, where you use another server to host your page, this problem will not be the same.<br/><br/>
-From reactrouter.com "HashRouter is for use in web browsers when the URL should not (or cannot) be sent to the server for some reason. This may happen in some shared hosting scenarios where you do not have full control over the server."
+This page is deployed on Netlify, and this is why the node router that is running in production will not work on the built page (the folders used in production will not be found). This is shown when you re-fresh the page from a route (that is not the base url), you will get a 404 from Netlify (it will also be unable to route to the error page created in the application).
+<br/><br/>
+To get around this I went with HashRouter from react-router-dom (built from the history API). This will add a (#) in the url. The browser will interpret this hashtag as an id, from which the hisory api will serve the deisred page.
+<br/><br/>
+For a real life application, where you use another server to host your page, this problem will not be the same.
 
 ### Animating
 
-There was some issues with the pagetranisions being a bit laggy on mobile devices. I tried to get around this with lazy loading and some other techniques, but I didn't get quite happy with the result. Finally I changed some parameters inside the Framer motion animations. It proves that scaling and some other properties require more work to run smoothly on mobile devices.
+There was some issues with the pagetranisions being a bit laggy on mobile devices when using Framer Motion. I tried to get around this with lazy loading and some other techniques, but I didn't get quite happy with the result. It proves that scaling and some other properties with Framer motion and mobile devices doesn't work too well. So for the animation to the modal, I wrote my own animation, by adding a delay to the routing and animate around that.
 
 ## Tools
 
@@ -93,10 +97,13 @@ There was some issues with the pagetranisions being a bit laggy on mobile device
 
 [demo](https://jcomputers.netlify.app// "Joakim Computers")
 
-![Acme Movies](/public/resources/home_02.png "landing page")
+![](/public/pic_001.png "landing page")
 </br>
 </br>
-![Acme Movies](/public/resources/detail_02.png "landing page")
+![](/public/pic_002.png "landing page")
+</br>
+</br>
+![modal](/public/pic_003.png "modal")
 
 ## Run
 
