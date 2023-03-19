@@ -36,6 +36,9 @@ export const ModalWrapper = styled.div<ModalProps>`
     font-size: 1.2rem;
     color: ${(props) => props.theme.brightWhite};
     opacity: ${({ isModal }) => (isModal ? "0" : "1")};
+    &:hover {
+      cursor: default;
+    }
   }
 `;
 
