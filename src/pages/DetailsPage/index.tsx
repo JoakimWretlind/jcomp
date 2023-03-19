@@ -4,13 +4,15 @@ import IProducts, { IImages } from "../../components/interfaces/IProducts";
 import { motion } from "framer-motion";
 import { HiOutlineArrowLongLeft } from "react-icons/hi2";
 import {
-  ContentWrapper,
-  HeaderWrapper,
-  Icon,
+  PageWrapper,
+  BackButton,
+  Header,
+  HeaderContainer,
   Img,
   ImgHolder,
   ImgWrapper,
-  PageWrapper,
+  ItemWrapper,
+  MainWrapper,
   TextPane,
   TextWrapper,
 } from "./style";
@@ -45,36 +47,41 @@ const DetailsPage02 = () => {
         transition={{ duration: 0.4, ease: [0.5, 0.11, 0.45, 0.15] }}
         exit={{ opacity: 0 }}
       >
-        <HeaderWrapper>
-          <Link to="/">
-            <Icon>
-              <HiOutlineArrowLongLeft />
-            </Icon>
-          </Link>
-          <h2>{`${brand} ${model}`}</h2>
-        </HeaderWrapper>
-        <ContentWrapper>
-          <ImgWrapper>
-            {images.map((image: IImages, idx: number) => {
-              return (
-                <Link key={image.id} to={`/${product.id}/${idx}`}>
-                  <ImgHolder>
-                    <Img src={image.image} alt={`${brand} ${model}`} />
-                  </ImgHolder>
-                </Link>
-              );
-            })}
-          </ImgWrapper>
-          <TextPane>
-            <TextWrapper>
-              <h4>{category}</h4>
-              <p>{infoDetail}</p>
-              {size ? <p>Storlek: {size}"</p> : null}
-              {color ? <p>Färg: {color}</p> : null}
-              <p className="price">Pris: {price}$</p>
-            </TextWrapper>
-          </TextPane>
-        </ContentWrapper>
+        <MainWrapper>
+          <HeaderContainer>
+            <BackButton to="/">
+              <div className="icon">
+                <HiOutlineArrowLongLeft />
+              </div>
+              <p>back</p>
+            </BackButton>
+            <Header>
+              <h2>{`${brand} ${model}`}</h2>
+            </Header>
+          </HeaderContainer>
+          <ItemWrapper>
+            <ImgWrapper>
+              {images.map((image: IImages, idx: number) => {
+                return (
+                  <Link key={image.id} to={`/${product.id}/${idx}`}>
+                    <ImgHolder>
+                      <Img src={image.image} alt={`${brand} ${model}`} />
+                    </ImgHolder>
+                  </Link>
+                );
+              })}
+            </ImgWrapper>
+            <TextPane>
+              <TextWrapper>
+                <h4>{category}</h4>
+                <p>{infoDetail}</p>
+                {size ? <p>Storlek: {size}"</p> : null}
+                {color ? <p>Färg: {color}</p> : null}
+                <p className="price">Pris: ${price}</p>
+              </TextWrapper>
+            </TextPane>
+          </ItemWrapper>
+        </MainWrapper>
       </PageWrapper>
     );
   } catch (err) {

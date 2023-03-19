@@ -1,46 +1,85 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const PageWrapper = styled.div`
   height: 100%;
   min-height: 100vh;
   width: 100%;
-  padding: 0 3rem;
+  padding: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: ${(props) => props.theme.midBlack};
-  //background-color: ${(props) => props.theme.midBlack};
   background: radial-gradient(#343434, #171717);
 `;
 
-export const HeaderWrapper = styled.div`
-  margin: 3rem auto;
+export const MainWrapper = styled.div`
+  position: relative;
+  padding: 3rem 0;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  max-width: 120rem;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-flex-group: yellowgreen;
+`;
+
+export const HeaderContainer = styled.div`
+  position: relative;
+  width: 100%;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: ${(props) => props.theme.brightWhite};
+  @media (min-width: ${(props) => props.theme.midScreen}) {
+    justify-content: center;
+  }
+`;
+
+export const BackButton = styled(Link)`
+  position: absolute;
+  left: 1rem;
+  width: min-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: ${(props) => props.theme.brightWhite};
+  @media (min-width: ${(props) => props.theme.midScreen}) {
+    left: 4rem;
+  }
+  .icon {
+    height: 2.4rem;
+    font-size: 3rem;
+  }
+  p {
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+`;
+
+export const Header = styled.div`
+  width: 65%;
+  margin-right: 1rem;
+  @media (min-width: ${(props) => props.theme.midScreen}) {
+    margin-right: 0;
+  }
   h2 {
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(1.8rem, 3vw, 3rem);
     font-weight: 300;
     text-transform: capitalize;
     letter-spacing: 0.2rem;
-    color: ${(props) => props.theme.brightWhite};
-  }
-  @media (min-width: ${(props) => props.theme.midScreen}) {
-    margin: 0 auto 3rem;
   }
 `;
 
-export const Icon = styled.div`
-  font-size: 3rem;
-  margin: 0rem 1rem 0 0;
-  color: ${(props) => props.theme.brightWhite};
-  @media (min-width: ${(props) => props.theme.midScreen}) {
-    margin: 0.3rem 1rem 0 0;
-  }
-`;
-
-export const ContentWrapper = styled.div`
+export const ItemWrapper = styled.div`
   width: 100%;
-  max-width: 120rem;
   display: grid;
   grid-template-rows: repeat(2, max-content);
   padding-bottom: 7rem;
@@ -107,16 +146,8 @@ export const ImgHolder = styled.div`
     width: clamp(19rem, 22vw, 30rem);
     height: 23rem;
   }
-  /* img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-    transition: 0.7s ease;
-    filter: contrast(100%);
-  } */
   &:hover ${Img} {
     transition: 0.7s ease;
-    //transform: translateY(-0.1rem);
     transform: scale(1.035);
     filter: contrast(120%);
     cursor: pointer;
